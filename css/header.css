@@ -22,54 +22,57 @@
 }
 
 .logo-container {
-    background-color: aquamarine;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    flex: 0 0 55px;
+    height: 55px;
+    border: none;
+}
+
+.logo-text h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.logo-text span {
+    font-size: .9rem;
+}
+
+html[lang="en"] .logo-text {
+    text-align: left;
+}
+
+html[lang="fa"] .logo-text {
+    text-align: right;
 }
 
 .navbar-container {
+    position: static;
     display: flex;
+    flex-direction: row;
     justify-content: start;
     align-items: center;
     background-color: white;
+    max-height: 87px;
+    flex-shrink: 1;
 }
-
-/* html[lang="en"] .navbar-container-aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 35vw;
-    background-color: red;
-    transform: translateX(35vw);
-    transition: transform 500ms;
-}
-
-html[lang="fa"] .navbar-container-aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 35vw;
-    background-color: red;
-    transform: translateX(-35vw);
-    transition: transform 500ms;
-} */
 
 
 
 .navbar-container .search-category-container {
-    flex: 1 1 50%;
+    flex: 1 1 75%;
 }
 
 .navbar-container .lang-cart-container {
-    flex: 1 1 30%;
+    flex: 1 1 25%;
 
 }
 
@@ -78,7 +81,7 @@ html[lang="fa"] .navbar-container-aside {
     background-color: white;
     color: rgba(0, 124, 218);
     border: 1px solid rgba(0, 124, 218);
-    border-radius:.25rem ;
+    border-radius: .25rem;
 }
 
 @media screen and (max-width:576px) {
@@ -94,6 +97,11 @@ html[lang="fa"] .navbar-container-aside {
         justify-content: center;
     }
 
+
+}
+
+@media screen and (max-width:768px) {
+
     html[lang="en"] .navbar-container {
         flex-direction: column;
         position: fixed;
@@ -103,6 +111,7 @@ html[lang="fa"] .navbar-container-aside {
         width: 35vw;
         transform: translateX(35vw);
         transition: transform 500ms, opacity 500ms;
+        max-height: 87px;
         opacity: 0;
     }
 
@@ -115,6 +124,7 @@ html[lang="fa"] .navbar-container-aside {
         width: 35vw;
         transform: translateX(-35vw);
         transition: transform 500ms, opacity 500ms;
+        max-height: 87px;
         opacity: 0;
     }
 
