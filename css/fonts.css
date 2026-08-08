@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Vazirmatn";
+    src: url(../assests/Vazirmatn-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url(../assests/Vazirmatn-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url(../assests/Vazirmatn-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url(../assests/Vazirmatn-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assests/Inter_18pt-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assests/Inter_18pt-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assests/Inter_18pt-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assests/Inter_18pt-Bold.ttf);
+    font-weight: 700;
+}
