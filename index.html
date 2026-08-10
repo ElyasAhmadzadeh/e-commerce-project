@@ -13,27 +13,27 @@
 </head>
 
 <body>
+    <div class="overlay-box">
+        <div class="overlay"></div>
+    </div>
     <header class="header">
         <div class="container-fluid">
-            <section class="top-header row justify-content-between align-items-center p-1 p-lg-2">
-                <div class="phone-number-header col-12 col-sm-4 col-md-6">
-                    <span class="phone-number-icon px-1"><i class="fa fa-phone"></i></span> <span
+            <section class="top-header row justify-content-between align-items-center py-1 px-0 p-lg-2">
+                <div class="phone-number-header col-12 col-sm-4 col-md-5">
+                    <span class="phone-number-icon px-1"><i class="fa fa-phone" aria-hidden="true"></i></span> <span
                         class="phone-number">+98 912 7733445</span>
                 </div>
-                <div class="date-time-header d-flex col-12 col-sm-8 col-md-6">
-                    <div class="date">
-                        <span class="date-icon"><i class="fa fa-calendar-alt px-1"></i></span>
-                        <span class="date-display">10 / 04 / 2026</span>
-                    </div>
-                    <div class="time">
-                        <span class="time-icon px-2"><i class="fa fa-clock"></i></span><span class="time-display">22 :
-                            30 : 01</span>
-                    </div>
+                <div class="contact-header-box col-12 col-sm-8 col-md-7">
+                    <a href="#" class="text-white contact-us"> <i class="fa fa-address-book pe-2"></i><span>Contact
+                            Us</span></a>
+                    <span class="email-address text-white"><span class="pe-2"><i
+                                class="fa fa-envelope"></i></span><span>myecomerce@gmail.com</span></span>
                 </div>
             </section>
-            <section class="primary-header row py-3 px-0">
+            <section class="primary-header row py-2 px-0">
                 <div class="logo-container col-10 col-sm-10 col-md-3">
-                    <img src="./assests/commerce-business-and-finance-svgrepo-com.svg" class="logo-img img-thumbnail" alt="">
+                    <img src="./assests/commerce-business-and-finance-svgrepo-com.svg" class="logo-img img-thumbnail"
+                        alt="site logo">
                     <div class="logo-text">
                         <h6>Technology Shop</h6>
                         <span>Shop Smart, Live Better</span>
@@ -41,11 +41,58 @@
                 </div>
                 <nav class="navbar-container col-md-9 px-1">
                     <div class="search-category-container">
-                        <form action="#" class=""></form>
+                        <form action="#" class="header-search-form">
+                            <div class="input-group">
+                                <input type="search" class="header-search-input ps-2"
+                                    placeholder="what are you looking for?" name="" id="headerSearchInput">
+                                <button class="search-btn" type="submit" id="header-search-btn"><i
+                                        class="fa fa-search"></i></button>
+                            </div>
+                            <section class="search-suggestion p-2">
+                                <ul class="search-suggestion-list list-unstyled p-1">
+                                    <li class="search-suggestion-item"><span class="suggestion-title">suggest1</span><span
+                                            class="suggestion-stock-status">gghhhhg</span></li>
+                                    <li class="search-suggestion-item"><span class="suggestion-title">suggest1</span><span
+                                            class="stock-status"></span></li>
+                                    <li class="search-suggestion-item"><span class="suggestion-title">suggest1</span><span
+                                            class="stock-status"></span></li>
+                                    <li class="search-suggestion-item"><span class="suggestion-title">suggest1</span><span
+                                            class="stock-status"></span></li>
+                                    <li class="search-suggestion-item"><span class="suggestion-title">suggest1</span><span
+                                            class="stock-status"></span></li>
+                                </ul>
+                            </section>
+                        </form>
+                        <div class="category-selection py-2 py-md-0">
+                            <button type="button" class="dropdown-category-btn dropdown-toggle"
+                                id="headerCategoryDropDownBtn" data-bs-toggle="dropdown">Categories</button>
+                            <ul class="dropdown-menu mt-1 mt-md-2" aria-labelledby="headerCategoryDropDownBtn">
+                                <li><a href="#" class="dropdown-item">category 1</a></li>
+                                <li><a href="#" class="dropdown-item">category 2</a></li>
+                                <li><a href="#" class="dropdown-item">category 3</a></li>
+                                <li><a href="#" class="dropdown-item">category 4</a></li>
+                                <li><a href="#" class="dropdown-item">category 5</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="lang-cart-container">cart</div>
+                    <div class="lang-cart-container">
+                        <button type="button" class="dropdown-lang-btn dropdown-toggle" id="headerLangDropDownBtn"
+                            data-bs-toggle="dropdown">Language</button>
+                        <ul class="dropdown-menu mt-1 mt-md-2" aria-labelledby="headerLangDropDownBtn">
+                            <li><a href="#" class="dropdown-item"><img
+                                        src="./assests/flag-for-flag-united-kingdom-svgrepo-com.svg"
+                                        class="flag-icon pe-2" alt=""><span>English</span></a></li>
+                            <li><a href="#" class="dropdown-item"><img
+                                        src="./assests/flag-for-flag-iran-svgrepo-com.svg" class="flag-icon pe-2"
+                                        alt=""><span>Farsi</span></a></li>
+                        </ul>
+                        <a href="#" class="cart-btn text-center"><i class="fa fa-cart-shopping"></i><span
+                                class="ps-1">cart</span></a>
+                    </div>
                 </nav>
-                <button type="button" class="header-nav-btn d-inline-block d-md-none col-2"></button>
+                <button type="button" class="header-nav-btn d-inline-block d-md-none col-1 me-3">
+                    <i class="fa fa-bars"></i>
+                </button>
             </section>
         </div>
     </header>

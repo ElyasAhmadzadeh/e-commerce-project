@@ -1,18 +1,42 @@
+@import url(./variables.css);
+
 .header .top-header {
-    background-color: rgb(0, 127, 212);
+    background-color: rgba(15, 23, 42, 1);
     color: white;
     font-size: 1.1rem;
     font-weight: 500;
 }
 
+.overlay-box {
+    display: none;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 990;
+}
+
+.overlay--active {
+    display: block;
+}
 
 .phone-number-header {
     padding: 0;
 }
 
-.date-time-header {
-    padding: 0;
-    justify-content: end;
+.contact-header-box {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+}
+
+.contact-us {
+    text-decoration: none;
 }
 
 .primary-header {
@@ -36,14 +60,16 @@
     border: none;
 }
 
-.logo-text h6 {
+.logo-text h1 {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0;
+    color: var(--color-text-primary);
 }
 
 .logo-text span {
     font-size: .9rem;
+    color: var(--color-text-secondary);
 }
 
 html[lang="en"] .logo-text {
@@ -69,19 +95,165 @@ html[lang="fa"] .logo-text {
 
 .navbar-container .search-category-container {
     flex: 1 1 75%;
+    display: flex;
+    align-items: center;
+}
+
+.header-search-form {
+    flex: 1 0 70%;
+    position: relative;
+}
+
+.header-search-form .input-group {
+    padding: 5px;
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    transition: box-shadow 200ms;
+
+}
+
+.header-search-input {
+    flex: 1 1 90%;
+    border: none;
+    outline: none;
+}
+
+.header-search-form .input-group:has(.header-search-input:focus) {
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.search-btn {
+    flex: 0 1 10%;
+    border: 1px solid var(--color-border);
+    outline: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 1.5rem !important;
+    max-width: 50px;
+}
+
+.search-suggestion {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+    display: none;
+}
+
+.search-suggestion--active {
+    display: block;
+}
+
+.search-suggestion-list {
+    max-height: 230px;
+    overflow-y: scroll;
+}
+
+.search-suggestion-list::-webkit-scrollbar {
+    display: none;
+}
+
+.search-suggestion-item {
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-suggestion-item:hover {
+    background-color: rgba(15, 23, 42, .1);
+}
+
+.suggestion-stock-status {
+    color: var(--color-text-secondary);
+    font-size: .75rem;
+}
+
+.suggestion-title {
+    color: var(--color-text-primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.category-selection {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-category-btn,
+.dropdown-lang-btn,
+.cart-btn {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    outline: none;
+    text-decoration: none;
+    background-color: white;
+    color: var(--color-text-primary);
+    transition: all 300ms;
+    font-size: .85rem;
+}
+
+.dropdown--active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.category-selection .dropdown-menu .dropdown-item {
+    background-color: none;
+    transition: background-color 200ms, color 200ms;
+}
+
+.category-selection .dropdown-menu .dropdown-item:hover {
+    background-color: var(--color-primary);
+    color: white;
 }
 
 .navbar-container .lang-cart-container {
     flex: 1 1 25%;
-
+    display: flex;
+    gap: 10px;
 }
+
+.lang-cart-container .dropdown-item {
+    transition: all 300ms;
+}
+
+.lang-cart-container .dropdown-item:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+
+.flag-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.cart-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
 
 
 .header-nav-btn {
     background-color: white;
-    color: rgba(0, 124, 218);
-    border: 1px solid rgba(0, 124, 218);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
     border-radius: .25rem;
+}
+
+.header-nav-btn {
+    max-width: 50px;
 }
 
 @media screen and (max-width:576px) {
@@ -97,10 +269,16 @@ html[lang="fa"] .logo-text {
         justify-content: center;
     }
 
+    .contact-header-box {
+        justify-content: center;
 
+    }
 }
 
 @media screen and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
 
     html[lang="en"] .navbar-container {
         flex-direction: column;
@@ -108,11 +286,14 @@ html[lang="fa"] .logo-text {
         right: 0;
         top: 0;
         height: 100vh;
-        width: 35vw;
-        transform: translateX(35vw);
+        width: 50vw;
+        transform: translateX(50vw);
         transition: transform 500ms, opacity 500ms;
-        max-height: 87px;
+        max-height: none;
+        padding-top: 15px;
         opacity: 0;
+        z-index: 999;
+        min-width: 270px;
     }
 
     html[lang="fa"] .navbar-container {
@@ -121,11 +302,14 @@ html[lang="fa"] .logo-text {
         left: 0;
         top: 0;
         height: 100vh;
-        width: 35vw;
-        transform: translateX(-35vw);
+        width: 50vw;
+        transform: translateX(-50vw);
         transition: transform 500ms, opacity 500ms;
-        max-height: 87px;
+        max-height: none;
+        padding-top: 15px;
         opacity: 0;
+        z-index: 999;
+        min-width: 270px;
     }
 
     .navbar-container.navbar--active {
@@ -135,10 +319,36 @@ html[lang="fa"] .logo-text {
 
     .navbar-container .search-category-container {
         flex: 0 1 10%;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-search-form {
+        flex: 1 0 50%;
+        width: 100%;
+    }
+
+    .header-search-input {
+        flex: 1 1 80%;
+    }
+
+    .search-btn {
+        flex: 0 1 15%;
+    }
+
+    .category-selection {
+        flex: 1 1 50%;
     }
 
     .navbar-container .lang-cart-container {
         flex: 0 1 10%;
     }
 
+}
+
+@media screen and (max-width:998px) {
+    .navbar-container .lang-cart-container {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
