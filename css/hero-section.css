@@ -1,0 +1,42 @@
+@import url(./variables.css);
+
+.main {
+    background-color: var(--color-background);
+}
+
+.hero-section {
+    background-color: var(--color-primary);
+}
+
+.hero-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+}
+.hero-text{
+    font-size: 2rem;
+    color: rgba(255,255,255,.85);
+}
+
+.hero-img-box{
+    display: flex;
+    justify-content: center;
+}
+.hero-img-box img{
+    max-width: 500px;
+    width: 100%;
+}
+
+
+@media screen and (max-width:998px) {
+    .hero-img-box img{
+        transform: scale(.8,.8);
+    }
+}

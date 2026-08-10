@@ -1,5 +1,12 @@
 @import url(./variables.css);
 
+
+
+.header{
+    position: sticky;
+    top: 0;
+}
+
 .header .top-header {
     background-color: rgba(15, 23, 42, 1);
     color: white;
@@ -17,7 +24,7 @@
     width: 100vw;
     height: 100dvh;
     background-color: rgba(0, 0, 0, .3);
-    z-index: 990;
+    z-index: 900;
 }
 
 .overlay--active {
@@ -139,6 +146,11 @@ html[lang="fa"] .logo-text {
     border-radius: 1rem;
     border: 1px solid var(--color-border);
     display: none;
+    z-index: 999;
+    background-color: white;
+}
+.search-suggestion *{
+    z-index: 999;
 }
 
 .search-suggestion--active {
@@ -148,6 +160,7 @@ html[lang="fa"] .logo-text {
 .search-suggestion-list {
     max-height: 230px;
     overflow-y: scroll;
+    background-color: white;
 }
 
 .search-suggestion-list::-webkit-scrollbar {
@@ -292,7 +305,7 @@ html[lang="fa"] .logo-text {
         max-height: none;
         padding-top: 15px;
         opacity: 0;
-        z-index: 999;
+        z-index: 995;
         min-width: 270px;
     }
 
@@ -308,7 +321,7 @@ html[lang="fa"] .logo-text {
         max-height: none;
         padding-top: 15px;
         opacity: 0;
-        z-index: 999;
+        z-index: 995;
         min-width: 270px;
     }
 
