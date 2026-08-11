@@ -1,0 +1,62 @@
+@import url(./animations.css);
+@import url(./variables.css);
+
+.main {
+    background-color: var(--color-background);
+}
+
+.features {
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: .9rem;
+    box-shadow: 0 0 12px rgba(15, 23, 42, 0.08);
+}
+
+.feature {
+    display: flex;
+    flex: 1 1 25%;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+
+}
+
+.feature-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-title {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.feature-text {
+    font-size: .75rem;
+    color: var(--color-text-secondary);
+}
+
+
+
+
+@media screen and (max-width:998px) {
+    .feature {
+        flex: 1 1 50%;
+    }
+
+    .features {
+        bottom: -85px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .feature {
+        flex: 1 1 100%;
+    }
+}

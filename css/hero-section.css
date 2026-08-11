@@ -1,10 +1,11 @@
 @import url(./variables.css);
+@import url(./animations.css);
 
-.main {
-    background-color: var(--color-background);
-}
+
 
 .hero-section {
+    justify-content: center;
+    position: relative;
     background-color: var(--color-primary);
 }
 
@@ -19,24 +20,114 @@
     font-weight: 700;
     font-size: 3rem;
     color: white;
-}
-.hero-text{
-    font-size: 2rem;
-    color: rgba(255,255,255,.85);
+    opacity: 0;
+    animation: hero-section-move-left .7s .5s 1 ease-out forwards;
+
 }
 
-.hero-img-box{
+.hero-text {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .85);
+    line-height: 1.2;
+    opacity: 0;
+    animation: hero-section-move-left .7s 1s 1 ease-out forwards;
+
+}
+
+.hero-section-shop-link {
+    text-decoration: none;
+    background-color: white;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    border: 1px solid var(--color-border);
+    border-radius: 3rem;
+    opacity: 0;
+    animation: hero-section-move-left .7s 1s 1 ease-out forwards;
+    transition: border 100ms, background-color 100ms, color 100ms;
+}
+
+.hero-section-shop-link:hover {
+    border: 1px solid white;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.hero-img-box {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
-.hero-img-box img{
+
+.hero-img-box img {
     max-width: 500px;
     width: 100%;
+    opacity: 0;
+    animation: hero-section-move-right .7s 1s 1 ease-out forwards;
 }
+
+.features {
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: .9rem;
+    box-shadow: 0 0 12px rgba(15, 23, 42, 0.08);
+}
+
+.feature {
+    display: flex;
+    flex: 1 1 25%;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+
+}
+
+.feature-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-title {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.feature-text {
+    font-size: .75rem;
+    color: var(--color-text-secondary);
+}
+
+
 
 
 @media screen and (max-width:998px) {
-    .hero-img-box img{
-        transform: scale(.8,.8);
+    .feature {
+        flex: 1 1 50%;
+    }
+
+    .features {
+        bottom: -85px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .feature {
+        flex: 1 1 100%;
     }
 }
