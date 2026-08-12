@@ -106,6 +106,10 @@
     color: var(--color-text-primary);
 }
 
+.featured-products-list-container {
+    position: relative;
+}
+
 .featured-products-list {
     display: flex;
     gap: 35px;
@@ -258,6 +262,26 @@
 .featured-products-page-link:hover {
     background-color: white;
     color: var(--color-primary);
+}
+
+.fp-prev-btn,
+.fp-next-btn {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, .87);
+    color: var(--color-text-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+}
+
+.fp-prev-btn {
+    left: 30px;
+}
+
+.fp-next-btn {
+    right: 30px;
 }
 
 @media screen and (max-width:998px) {
