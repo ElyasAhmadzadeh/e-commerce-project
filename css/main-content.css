@@ -456,8 +456,8 @@ html[lang="en"] .offer-discount {
     padding: 10px;
     border-radius: 1.5rem;
     position: absolute;
-    top:5px;
-    right:5px;
+    top: 5px;
+    right: 5px;
 }
 
 html[lang="fa"] .offer-discount {
@@ -466,8 +466,8 @@ html[lang="fa"] .offer-discount {
     padding: 10px;
     border-radius: 1.5rem;
     position: absolute;
-    top:5px;
-    left:5px;
+    top: 5px;
+    left: 5px;
 }
 
 
@@ -485,6 +485,104 @@ html[lang="fa"] .offer-discount {
 .special-offer-link:hover {
     background-color: white;
     color: var(--color-primary);
+}
+
+.FAQ {
+    background-image: linear-gradient(to bottom, rgba(76, 0, 130, 0) 30%, rgba(76, 0, 130, .08));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.accordion-item-box {
+    display: block;
+}
+
+
+.accordion-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: 2px solid var(--color-border);
+    background-color: white;
+}
+
+.question-icon {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.question-text {
+    line-height: 1.1;
+}
+
+.accordion-icon {
+    transition: transform 150ms ease-out;
+}
+
+.accordion-icon--active {
+    transform: rotateZ(180deg);
+}
+
+.accordion-description {
+    max-height: 0;
+    transition: max-height 250ms ease;
+    overflow: hidden;
+    background-color: rgba(161, 184, 233, 0.425);
+}
+
+.accordion-description.accordion--active {
+    max-height: 300px;
+}
+
+.brands-slide-show {
+    background-color: white;
+}
+
+
+
+.brands-list-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: scroll;
+}
+
+.brands-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.brands-group {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    animation: brands-slider-animation 5s infinite linear;
+}
+
+.brands-group .brand {
+    flex: 0 0 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.brand img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .FAQ {
+        background-position: center !important;
+    }
 }
 
 @media screen and (max-width:998px) {
@@ -513,6 +611,10 @@ html[lang="fa"] .offer-discount {
     .featured-products-list,
     .offered-products-container {
         gap: 15px;
+    }
+
+    .accordion-title-box {
+        font-size: .9rem !important;
     }
 
 }
