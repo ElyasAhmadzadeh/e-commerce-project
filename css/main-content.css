@@ -42,7 +42,7 @@
     color: var(--color-text-secondary);
 }
 
-.categories {}
+
 
 .categories-title {
     color: var(--color-text-primary);
@@ -130,40 +130,86 @@
     border: 1px solid var(--color-border);
 }
 
-.fp-image {
+/* .fp-image {
+    flex: 0 0 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.product-image {
+    position: relative;
     flex: 0 0 180px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fp-image img {
+/* .fp-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 1.75rem;
+} */
+
+.product-image img {
     width: 150px;
     height: 150px;
     border-radius: 1.75rem;
 }
 
-.fp-title {
+/* .fp-title {
     font-size: 1rem;
     font-weight: 700;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+    color: var(--color-text-primary);
+} */
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
     overflow: hidden;
     color: var(--color-text-primary);
 }
 
-.fp-text {
+/* .fp-text {
     font-size: .8rem;
     line-height: 1.5;
     color: var(--color-text-secondary);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+} */
+
+.product-text {
+    font-size: .8rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
 }
 
-.fp-rating {
+/* .fp-rating {
+    display: flex;
+    gap: 15px;
+    color: var(--color-text-secondary);
+    font-size: .85rem;
+    font-weight: 500;
+} */
+
+.rating {
     display: flex;
     gap: 15px;
     color: var(--color-text-secondary);
@@ -171,18 +217,41 @@
     font-weight: 500;
 }
 
-.fp-rating-stars-icons .list-inline-item {
+/* .fp-rating-stars-icons .list-inline-item {
+    position: relative;
+    margin: 0;
+} */
+
+.rating-stars-icon .list-inline-item {
     position: relative;
     margin: 0;
 }
 
-.fp-rating-stars-icons .list-inline-item>svg {
+/* .fp-rating-stars-icons .list-inline-item>svg {
+    color: rgb(197, 196, 196);
+    position: relative;
+    z-index: 2;
+} */
+
+.rating-stars-icon .list-inline-item>svg {
     color: rgb(197, 196, 196);
     position: relative;
     z-index: 2;
 }
 
-.fp-rating-stars-icons .list-inline-item>span {
+/* .fp-rating-stars-icons .list-inline-item>span {
+    display: inline-block;
+    color: gold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    min-height: 11.9px !important;
+    overflow-x: hidden;
+} */
+
+.rating-stars-icon .list-inline-item>span {
     display: inline-block;
     color: gold;
     position: absolute;
@@ -198,13 +267,13 @@
     z-index: 2 !important;
 }
 
-.fp-price .discounted-price {
+.product-price .discounted-price {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--color-primary);
 }
 
-.fp-price .without-discount-price {
+.product-price .without-discount-price {
     font-size: .85rem;
     color: var(--color-text-secondary);
     text-decoration: line-through;
@@ -284,6 +353,140 @@
     right: 30px;
 }
 
+.prev-btn,
+.next-btn {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, .87);
+    color: var(--color-text-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+}
+
+.prev-btn {
+    left: 30px;
+}
+
+.next-btn {
+    right: 30px;
+}
+
+.special-offer-box {
+    position: relative;
+}
+
+.special-offers {
+    background-color: var(--color-primary);
+    border-radius: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.special-offers-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: white;
+}
+
+.special-offers-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .89);
+    line-height: 1.3;
+    line-height: 1.3;
+}
+
+.title-discount-percent {
+    font-weight: 700;
+    color: white;
+}
+
+.special-offers-shop-link {
+    background-color: white;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-border);
+    transition: background-color 100ms, color 100ms, border 100ms;
+
+}
+
+.special-offers-shop-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border: 1px solid white;
+
+}
+
+.offer-timer-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.offered-products-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 30px;
+}
+
+.offered-products-container::-webkit-scrollbar {
+    display: none;
+}
+
+.offered-product {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex: 0 0 250px;
+    background-color: white;
+    border-radius: 1.75rem;
+    border: 1px solid var(--color-border);
+}
+
+html[lang="en"] .offer-discount {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px;
+    border-radius: 1.5rem;
+    position: absolute;
+    top:5px;
+    right:5px;
+}
+
+html[lang="fa"] .offer-discount {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px;
+    border-radius: 1.5rem;
+    position: absolute;
+    top:5px;
+    left:5px;
+}
+
+
+.special-offer-link {
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 10px;
+    border-radius: 1.3rem;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: color 200ms, background-color 200ms;
+}
+
+.special-offer-link:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
 @media screen and (max-width:998px) {
     .feature {
         flex: 1 1 50%;
@@ -307,9 +510,11 @@
         justify-content: flex-start;
     }
 
-    .featured-products-list {
+    .featured-products-list,
+    .offered-products-container {
         gap: 15px;
     }
+
 }
 
 @media screen and (max-width:576px) {
