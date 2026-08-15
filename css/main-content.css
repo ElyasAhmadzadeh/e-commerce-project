@@ -76,7 +76,7 @@
 
 .category-item:hover {
     box-shadow: 0 0 10px rgba(15, 23, 42, .1);
-    transform: scale(1.05, 1.05);
+    transform: scale(1.1, 1.1);
 }
 
 .category-item>a {
@@ -510,6 +510,10 @@ html[lang="fa"] .offer-discount {
     background-color: white;
 }
 
+.accordion-title {
+    margin: 0;
+}
+
 .question-icon {
     font-size: 1.8rem;
     font-weight: 600;
@@ -518,6 +522,7 @@ html[lang="fa"] .offer-discount {
 
 .question-text {
     line-height: 1.1;
+    font-weight: 700;
 }
 
 .accordion-icon {
@@ -549,7 +554,7 @@ html[lang="fa"] .offer-discount {
     display: flex;
     flex-wrap: nowrap;
     gap: 30px;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .brands-list-container::-webkit-scrollbar {
