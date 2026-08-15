@@ -2,7 +2,7 @@
 
 
 
-.header{
+.header {
     position: sticky;
     top: 0;
     z-index: 800;
@@ -18,14 +18,16 @@
 .overlay-box {
     display: none;
     position: relative;
+
 }
 
 .overlay {
     position: absolute;
+    top: -55px;
     width: 100vw;
-    height: 100dvh;
+    height: 110vh;
     background-color: rgba(0, 0, 0, .3);
-    z-index: 900;
+    z-index: 850;
 }
 
 .overlay--active {
@@ -97,6 +99,7 @@ html[lang="fa"] .logo-text {
     background-color: white;
     max-height: 87px;
     flex-shrink: 1;
+
 }
 
 
@@ -150,7 +153,8 @@ html[lang="fa"] .logo-text {
     z-index: 999;
     background-color: white;
 }
-.search-suggestion *{
+
+.search-suggestion * {
     z-index: 999;
 }
 
@@ -299,8 +303,8 @@ html[lang="fa"] .logo-text {
         position: fixed;
         right: 0;
         top: 0;
-        height: 100vh;
-        width: 50vw;
+        height: 105vh;
+        width: 55vw;
         transform: translateX(50vw);
         transition: transform 500ms, opacity 500ms;
         max-height: none;
@@ -315,8 +319,8 @@ html[lang="fa"] .logo-text {
         position: fixed;
         left: 0;
         top: 0;
-        height: 100vh;
-        width: 50vw;
+        height: 105vh;
+        width: 55vw;
         transform: translateX(-50vw);
         transition: transform 500ms, opacity 500ms;
         max-height: none;
