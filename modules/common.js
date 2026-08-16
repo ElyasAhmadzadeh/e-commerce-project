@@ -1,1 +1,1 @@
-const API = "https://dummyjson.com/products?limit=0";
+export const API = "https://dummyjson.com/products";

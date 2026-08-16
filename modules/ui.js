@@ -18,3 +18,14 @@ function navbarActivator() {
     })
 
 }
+
+export function FAQEventApplier() {
+    const accordionTitles = document.querySelectorAll(".accordion-title-box");
+    accordionTitles.forEach(item => {
+        item.addEventListener("click", function (event) {
+            const clickedEL = event.target.closest(".accordion-item-box");
+            clickedEL.querySelector(".accordion-icon").classList.toggle("accordion-icon--active");
+            clickedEL.querySelector(".accordion-description").classList.toggle("accordion--active");
+        })
+    })
+}
