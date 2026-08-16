@@ -19,13 +19,13 @@
             <section class="top-header row justify-content-between align-items-center py-1 px-0 p-lg-2">
                 <div class="phone-number-header col-12 col-sm-4 col-md-5">
                     <span class="phone-number-icon px-1"><i class="fa fa-phone" aria-hidden="true"></i></span> <span
-                        class="phone-number">+98 912 7733445</span>
+                        class="phone-number"><a href="tel:+989127733445">+98 912 7733445</a></span>
                 </div>
                 <div class="contact-header-box col-12 col-sm-8 col-md-7">
                     <a href="#" class="text-white contact-us"> <i class="fa fa-address-book pe-2"></i><span>Contact
                             Us</span></a>
                     <span class="email-address text-white"><span class="pe-2"><i
-                                class="fa fa-envelope"></i></span><span>myecomerce@gmail.com</span></span>
+                                class="fa fa-envelope"></i></span><span><a href="mailto:myecomerce@gmail.com">myecomerce@gmail.com</a></span></span>
                 </div>
             </section>
             <section class="primary-header row py-2 px-0">
@@ -73,11 +73,10 @@
                             <button type="button" class="dropdown-category-btn dropdown-toggle"
                                 id="headerCategoryDropDownBtn" data-bs-toggle="dropdown">Categories</button>
                             <ul class="dropdown-menu mt-1 mt-md-2" aria-labelledby="headerCategoryDropDownBtn">
-                                <li><a href="#" class="dropdown-item">category 1</a></li>
-                                <li><a href="#" class="dropdown-item">category 2</a></li>
-                                <li><a href="#" class="dropdown-item">category 3</a></li>
-                                <li><a href="#" class="dropdown-item">category 4</a></li>
-                                <li><a href="#" class="dropdown-item">category 5</a></li>
+                                <li><a href="#" class="dropdown-item">Smartphones</a></li>
+                                <li><a href="#" class="dropdown-item">Laptops</a></li>
+                                <li><a href="#" class="dropdown-item">Tablets</a></li>
+                                <li><a href="#" class="dropdown-item">Mobile Accessories</a></li>
                             </ul>
                         </div>
                     </div>
@@ -93,7 +92,7 @@
                                         alt=""><span>Farsi</span></a></li>
                         </ul>
                         <a href="#" class="cart-btn text-center"><i class="fa fa-cart-shopping"></i><span
-                                class="ps-1">cart</span></a>
+                                class="ps-1">Cart</span></a>
                     </div>
                 </nav>
                 <button type="button" class="header-nav-btn d-inline-block d-md-none col-1 me-3">
@@ -193,7 +192,7 @@
         <section class="featured-products row py-5" id="featuredProducts">
             <h3 class="featured-products-title ps-5 col-12">Featured Products</h3>
             <div class="featured-products-list-container pt-5">
-                <ul class="featured-products-list pb-4 list-unstyled">
+                <ul class="featured-products-list scrolled-list pb-4 list-unstyled">
                     <template id="featuredProductsTemplate">
                         <li class="featured-products-item" data-product-id="product-id">
                             <div class="product-image">
@@ -228,259 +227,6 @@
                             </div>
                         </li>
                     </template>
-                    <!-- <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Samsung Galaxy S8</h5>
-                            <p class=" product-text px-2 ">The Samsung Galaxy S8 is a premium smartphone with an
-                                Infinity
-                                Display, offering a stunning visual experience. It boasts advanced camera capabilities
-                                and cutting-edge technology.</p>
-                            <div class=" rating px-2 "><span class="rating-value fp-rating-value">4.4</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">499.99$</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Samsung Galaxy Tab S8 Plus Grey</h5>
-                            <p class=" product-text px-2 ">The Samsung Galaxy Tab S8 Plus in Grey is a high-performance
-                                Android
-                                tablet by Samsung. With a large AMOLED display, powerful processor, and S Pen support,
-                                it's ideal for productivity and entertainment.</p>
-                            <div class="rating px-2 "><span class="rating-value">4.68</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">599.99$</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Samsung Galaxy Tab White</h5>
-                            <p class=" product-text px-2 ">The Samsung Galaxy Tab in White is a sleek and versatile
-                                Android
-                                tablet. With a vibrant display, long-lasting battery, and a range of features, it offers
-                                a great user experience for various tasks.</p>
-                            <div class="rating px-2 "><span class="rating-value fp-rating-value">3.72</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">349.99$</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Huawei Matebook X Pro</h5>
-                            <p class=" product-text px-2 ">The Huawei Matebook X Pro is a slim and stylish laptop with a
-                                high-resolution touchscreen display, offering a premium experience for users on the go.
-                            </p>
-                            <div class="rating px-2 "><span class="rating-value fp-rating-value">4.98</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">1399.99$</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Asus Zenbook Pro Dual Screen Laptop</h5>
-                            <p class=" product-text px-2 ">The Asus Zenbook Pro Dual Screen Laptop is a high-performance
-                                device with
-                                dual screens, providing productivity and versatility for creative professionals.</p>
-                            <div class="rating px-2 "><span class="rating-value fp-rating-value">3.95</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">1799.99$</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Amazon Echo Plus</h5>
-                            <p class=" product-text px-2 ">The Amazon Echo Plus is a smart speaker with built-in Alexa
-                                voice
-                                control. It features premium sound quality and serves as a hub for controlling smart
-                                home devices.</p>
-                            <div class="rating px-2 "><span class="rating-value fp-rating-value">4.99</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">99.99$</span><span
-                                    class="without-discount-price">500</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="featured-products-item" data-product-id="product-id">
-                        <div class=" product-image">
-                            <img src="https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp"
-                                alt="featured-product-image">
-                        </div>
-                        <div class="fp-description">
-                            <h5 class=" product-title px-2 ">Apple HomePod Mini Cosmic Grey</h5>
-                            <p class=" product-text px-2 ">The Apple HomePod Mini in Cosmic Grey is a compact smart
-                                speaker
-                                that
-                                delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart
-                                home experience.</p>
-                            <div class="rating px-2"><span class="frating-value p-rating-value">4.62</span>
-                                <ul class=" rating-stars-icon list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="test-show-star gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                            class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-
-                                </ul>
-                            </div>
-                            <h6 class=" product-price p-3"><span class="discounted-price pe-2">99.99$</span><span
-                                    class="without-discount-price">500</span></h6>
-                            <div class="fp-buttons">
-                                <a class="fp-view-btn p-2">View <i class="fa fa-eye" aria-hidden="true"></i></a><a
-                                    class="fp-addtocard-btn p-2">Add to cart</a>
-                            </div>
-                        </div>
-                    </li> -->
                 </ul>
                 <a href="#" class="featured-products-page-link p-3">See more items</a>
                 <button class="prev-btn prev-btn p-3 d-none d-md-block"><i class="fa fa-arrow-left"></i></button>
@@ -497,7 +243,7 @@
                     <span class="offer-timer"><span class="hours">05</span> : <span class="minutes">10</span> : <span
                             class="seconds">15</span></span>
                 </h4>
-                <ul class="offered-products-container m-0 py-4 px-1 w-100">
+                <ul class="offered-products-container scrolled-list m-0 py-4 px-1 w-100">
 
                     <template id="spacialOfferTemplate">
                         <li class="offered-product" data-product-id="product-id">

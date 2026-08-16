@@ -37,6 +37,10 @@
 .phone-number-header {
     padding: 0;
 }
+.phone-number > a{
+    text-decoration: none;
+    color: white;
+}
 
 .contact-header-box {
     display: flex;
@@ -47,6 +51,10 @@
 
 .contact-us {
     text-decoration: none;
+}
+.email-address a{
+    text-decoration: none;
+    color: white;
 }
 
 .primary-header {
@@ -230,7 +238,7 @@ html[lang="fa"] .logo-text {
 }
 
 .category-selection .dropdown-menu .dropdown-item:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-darkإ);
     color: white;
 }
 

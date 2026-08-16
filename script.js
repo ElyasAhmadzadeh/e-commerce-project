@@ -1,4 +1,4 @@
-import { headerNavbarBtnEventApplier , FAQEventApplier } from "./modules/ui.js";
+import { headerNavbarBtnEventApplier , FAQEventApplier , homepageCardsScrollBtnEventApplier } from "./modules/ui.js";
 import { getDataFromAPI } from "./modules/api.js";
 import { filterByDiscount, filterByRating } from "./modules/filterData.js";
 import { renderFeaturedProduct, renderSpecialOffer } from "./modules/renderElements.js";
@@ -15,4 +15,5 @@ async function getDataFromAPIInit() {
 }
 getDataFromAPIInit();
 headerNavbarBtnEventApplier();
+homepageCardsScrollBtnEventApplier();
 FAQEventApplier();

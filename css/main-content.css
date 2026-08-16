@@ -113,7 +113,8 @@
 .featured-products-list {
     display: flex;
     gap: 35px;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .featured-products-list::-webkit-scrollbar {
@@ -432,7 +433,8 @@
 .offered-products-container {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     gap: 30px;
 }
 
@@ -606,6 +608,8 @@ html[lang="fa"] .offer-discount {
     .category-item {
         flex: 0 0 170px;
     }
+
+
 }
 
 @media screen and (max-width:768px) {
@@ -620,6 +624,14 @@ html[lang="fa"] .offer-discount {
 
     .accordion-title-box {
         font-size: .9rem !important;
+    }
+
+    .featured-products-list {
+        overflow-x: scroll;
+    }
+
+    .offered-products-container {
+        overflow-x: scroll;
     }
 
 }
