@@ -37,7 +37,8 @@
 .phone-number-header {
     padding: 0;
 }
-.phone-number > a{
+
+.phone-number>a {
     text-decoration: none;
     color: white;
 }
@@ -52,7 +53,8 @@
 .contact-us {
     text-decoration: none;
 }
-.email-address a{
+
+.email-address a {
     text-decoration: none;
     color: white;
 }
@@ -153,13 +155,15 @@ html[lang="fa"] .logo-text {
 
 .search-suggestion {
     position: absolute;
-    width: 100%;
+    left: -40px;
+    width: 115%;
     margin-top: 5px;
     border-radius: 1rem;
     border: 1px solid var(--color-border);
     display: none;
     z-index: 999;
     background-color: white;
+    min-width: 300px;
 }
 
 .search-suggestion * {
@@ -368,6 +372,18 @@ html[lang="fa"] .logo-text {
 
     .navbar-container .lang-cart-container {
         flex: 0 1 10%;
+    }
+
+    .search-suggestion {
+        left: -50px;
+    }
+
+    .stock-status {
+        font-size: .7rem;
+    }
+
+    .suggestion-title {
+        font-size: .8rem;
     }
 
 }
