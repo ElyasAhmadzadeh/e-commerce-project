@@ -107,3 +107,15 @@ function displayTime(displayDate) {
     document.querySelector(".minutes").textContent = minutes.toString().padStart(2, "0");
     document.querySelector(".seconds").textContent = seconds.toString().padStart(2, "0");
 }
+
+export function overlayDisplayCheck() {
+    window.addEventListener("resize", function () {
+        if (window.innerWidth < 768) {
+            const overlayBox = document.querySelector(".overlay-box");
+            overlayBox.classList.remove("overlay--active");
+            const navbar = document.querySelector(".navbar-container");
+            navbar.classList.remove("navbar--active");
+        }
+
+    })
+}
