@@ -237,12 +237,12 @@ html[lang="fa"] .logo-text {
 }
 
 .category-selection .dropdown-menu .dropdown-item {
-    background-color: none;
+    background-color: white;
     transition: background-color 200ms, color 200ms;
 }
 
 .category-selection .dropdown-menu .dropdown-item:hover {
-    background-color: var(--color-primary-darkإ);
+    background-color: var(--color-primary-dark);
     color: white;
 }
 

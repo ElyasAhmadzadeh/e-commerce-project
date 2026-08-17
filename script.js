@@ -14,7 +14,7 @@ async function getDataFromAPIInit() {
     filterByDiscount();
     renderSpecialOffer();
     clearAllFilters();
-    console.log(state);
+
     
 }
 searchSuggestionEventApplier();

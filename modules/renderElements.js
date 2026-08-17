@@ -4,14 +4,15 @@ import { state } from "./state.js";
 export function renderFeaturedProduct() {
     const FPTemplate = document.querySelector("#featuredProductsTemplate");
     const FPList = document.querySelector(".featured-products-list");
-
+    if (!FPList || !FPTemplate)
+        return;
 
     const copyFilteredProducts = state.filteredProducts.map(item => { return item });
     console.log(copyFilteredProducts);
 
     for (let i = 0; i < 8; i++) {
         const card = FPTemplate.content.cloneNode(true);
-        card.querySelector(".featured-products-item").setAttribute("data-product-id" , copyFilteredProducts[i].id);
+        card.querySelector(".featured-products-item").setAttribute("data-product-id", copyFilteredProducts[i].id);
         card.querySelector(".product-image > img").setAttribute("src", copyFilteredProducts[i].thumbnail);
         card.querySelector(".product-title").textContent = copyFilteredProducts[i].title;
         card.querySelector(".product-text").textContent = copyFilteredProducts[i].description;
@@ -26,13 +27,16 @@ export function renderFeaturedProduct() {
 export function renderSpecialOffer() {
     const SOTemplate = document.querySelector("#spacialOfferTemplate");
     const SOList = document.querySelector(".offered-products-container");
+    if (!SOList || !SOTemplate)
+        return;
+
 
     const copyFilteredProducts = state.filteredProducts.map(item => { return item });
 
     for (let i = 0; i < 8; i++) {
 
         const card = SOTemplate.content.cloneNode(true);
-        card.querySelector(".offered-product").setAttribute("data-product-id" , copyFilteredProducts[i].id);
+        card.querySelector(".offered-product").setAttribute("data-product-id", copyFilteredProducts[i].id);
         card.querySelector(".product-image > img").setAttribute("src", copyFilteredProducts[i].thumbnail);
         card.querySelector(".offer-discount").textContent = Math.floor(copyFilteredProducts[i].discountPercentage) + "%";
         card.querySelector(".product-title").textContent = copyFilteredProducts[i].title;

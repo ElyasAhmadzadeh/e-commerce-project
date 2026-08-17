@@ -21,6 +21,9 @@ function navbarActivator() {
 
 export function FAQEventApplier() {
     const accordionTitles = document.querySelectorAll(".accordion-title-box");
+    if (!accordionTitles)
+        return;
+
     accordionTitles.forEach(item => {
         item.addEventListener("click", function (event) {
             const clickedEL = event.target.closest(".accordion-item-box");
@@ -33,6 +36,9 @@ export function FAQEventApplier() {
 export function homepageCardsScrollBtnEventApplier() {
     const nextBtn = document.querySelectorAll(".next-btn");
     const prevBtn = document.querySelectorAll(".prev-btn");
+
+    if (nextBtn.length === 0 || prevBtn.length === 0)
+        return;
 
     nextBtn[0].addEventListener("click", scrollNext);
     nextBtn[1].addEventListener("click", scrollNext);
@@ -81,6 +87,14 @@ export function renderSuggestionList(results) {
 }
 
 export function timer() {
+
+    const hourDisplay = document.querySelector(".hours");
+    const minuteDisplay = document.querySelector(".minutes");
+    const secondDisplay = document.querySelector(".seconds");
+
+    if (!hourDisplay || !minuteDisplay || !secondDisplay)
+        return;
+
     const now = new Date();
     const targetDate = new Date();
     targetDate.setHours(now.getHours() + 5);
@@ -92,20 +106,20 @@ export function timer() {
 
         const displayedDate = targetDate.getTime() - nowCounter.getTime();
 
-        displayTime(displayedDate);
+        displayTime(displayedDate, hourDisplay, minuteDisplay, secondDisplay);
 
     }, 1000)
 }
 
-function displayTime(displayDate) {
+function displayTime(displayDate, hourDisplay, minuteDisplay, secondDisplay) {
     const hours = Math.floor(displayDate / 1000 / 3600);
     const minutes = Math.floor((displayDate / 1000 / 60) % 60);
     const seconds = Math.floor((displayDate / 1000) % 60);
 
 
-    document.querySelector(".hours").textContent = hours.toString().padStart(2, "0");
-    document.querySelector(".minutes").textContent = minutes.toString().padStart(2, "0");
-    document.querySelector(".seconds").textContent = seconds.toString().padStart(2, "0");
+    hourDisplay.textContent = hours.toString().padStart(2, "0");
+    minuteDisplay.textContent = minutes.toString().padStart(2, "0");
+    secondDisplay.textContent = seconds.toString().padStart(2, "0");
 }
 
 export function overlayDisplayCheck() {
