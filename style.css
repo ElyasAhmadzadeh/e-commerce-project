@@ -2,18 +2,20 @@
 @import url(./css/fonts.css);
 @import url(./css/hero-section.css);
 @import url(./css/homepage-main-content.css);
+@import url(./css/products-main-content.css);
 @import url(./css/footer.css);
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-html[lang = "en"] body{
-font-family: "Inter" , sans-serif;
+html[lang="en"] body {
+    font-family: "Inter", sans-serif;
 }
-html[lang = "fa"] body{
+
+html[lang="fa"] body {
     font-family: "Vazirmatn";
 }
