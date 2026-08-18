@@ -13,4 +13,6 @@ export async function getDataFromAPI() {
         dataArray = dataArray.concat(categoryProductObj.products);
     })
     state.allProducts = dataArray;
+    console.log(state.allProducts);
+    
 }
