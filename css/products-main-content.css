@@ -108,6 +108,7 @@
 
 .products-filters-box {
     flex: 1 0 32%;
+    max-width: 360px;
     background-color: white;
 }
 
@@ -129,8 +130,8 @@
     flex-direction: row;
 }
 
-.form-price-range::-webkit-slider-runnable-track{
-    background-image: linear-gradient(to right , rgba(78, 148, 240, 0.716) 0% , rgba(78, 148, 240, 0.716) var(--price-range-progress , 50%) , transparent var(--price-range-progress , 50%) , transparent 100%);
+.form-price-range::-webkit-slider-runnable-track {
+    background-image: linear-gradient(to right, rgba(78, 148, 240, 0.716) 0%, rgba(78, 148, 240, 0.716) var(--price-range-progress, 50%), transparent var(--price-range-progress, 50%), transparent 100%);
 }
 
 .price-range-value {
@@ -143,12 +144,7 @@
     color: rgba(100, 116, 139, 0.5);
 }
 
-.products-cards-container {
-    flex: 0 0 68%;
-    height: 500px;
-}
-
-.filters-submit-btn{
+.filters-submit-btn {
     background-color: var(--color-primary);
     color: white;
     border-radius: .4rem;
@@ -156,8 +152,40 @@
     outline: none;
     transition: background-color 100ms;
 }
-.filters-submit-btn:hover{
+
+.filters-submit-btn:hover {
     background-color: rgb(33, 82, 188);
+}
+
+.products-cards-container {
+    flex: 1 0 68%;
+}
+
+
+
+.product-card-list {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+
+.product-item {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    flex: 0 0 270px;
+}
+
+.product-item>article {
+    display: flex;
+    flex-direction: column;
+}
+
+.products-page-product-image img {
+    width: 200px;
+    height: 200px;
 }
 
 
@@ -165,6 +193,19 @@
 
 
 
+
+@media screen and (max-width:1200px) {
+
+    .product-item {
+        flex: 0 0 235px;
+    }
+}
+
+@media screen and (max-width:998px) {
+    .product-item {
+        flex: 0 0 48%;
+    }
+}
 
 @media screen and (max-width:768px) {
     .toolbar {
@@ -195,6 +236,7 @@
 
     .products-filters-box {
         width: 100%;
+        max-width: none;
         flex: 1;
     }
 
@@ -203,4 +245,14 @@
         flex: 1;
     }
 
+    .product-item {
+        flex: 0 0 30%;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+        .product-item {
+        flex: 0 0 46%;
+    }
 }
