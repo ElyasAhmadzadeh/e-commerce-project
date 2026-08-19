@@ -19,3 +19,7 @@ html[lang="en"] body {
 html[lang="fa"] body {
     font-family: "Vazirmatn";
 }
+
+body::-webkit-scrollbar{
+    display: none;
+}
