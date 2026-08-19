@@ -1,13 +1,13 @@
-import { state } from "./state.js";
 
 
-export function renderFeaturedProduct() {
+
+export function renderFeaturedProduct(data) {
     const FPTemplate = document.querySelector("#featuredProductsTemplate");
     const FPList = document.querySelector(".featured-products-list");
     if (!FPList || !FPTemplate)
         return;
 
-    const copyFilteredProducts = state.filteredProducts.map(item => { return item });
+    const copyFilteredProducts = data.map(item => { return item });
     console.log(copyFilteredProducts);
 
     for (let i = 0; i < 8; i++) {
@@ -24,14 +24,14 @@ export function renderFeaturedProduct() {
     }
 }
 
-export function renderSpecialOffer() {
+export function renderSpecialOffer(data) {
     const SOTemplate = document.querySelector("#spacialOfferTemplate");
     const SOList = document.querySelector(".offered-products-container");
     if (!SOList || !SOTemplate)
         return;
 
 
-    const copyFilteredProducts = state.filteredProducts.map(item => { return item });
+    const copyFilteredProducts = data.map(item => { return item });
 
     for (let i = 0; i < 8; i++) {
 
@@ -60,5 +60,37 @@ function goldStarsRender(starsEl, rating) {
     }
     starsEl[fullStarCounter].classList.add("test-show-star");
     starsEl[fullStarCounter].style.width = Math.floor(ratingIncompleteStarPercentage).toString() + "%";
+
+}
+
+export function renderProductCard(data, pageNumber = 1) {
+    const ITEMS_PER_PAGE = 8;
+    const ProductsTemplate = document.querySelector("#productItemTemplate");
+    const ProductList = document.querySelector(".product-card-list");
+    const start = (pageNumber - 1) * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE
+
+
+    if (!ProductsTemplate || !ProductList)
+        return;
+
+
+    const copyFilteredProducts = data.map(item => { return item });
+    console.log(copyFilteredProducts);
+    copyFilteredProducts.slice(start, end).forEach(product => {
+        const card = ProductsTemplate.content.cloneNode(true);
+        card.querySelector(".article-container").setAttribute("data-product-id", product.id);
+        card.querySelector(".product-image > img").setAttribute("src", product.thumbnail);
+        // card.querySelector(".offer-discount").textContent = Math.floor(product.discountPercentage) + "%";
+        card.querySelector(".product-title").textContent = product.title;
+        card.querySelector(".rating-value").textContent = product.rating;
+        const goldStarWrappers = card.querySelectorAll(".gold-star-wrapper");
+        goldStarsRender(goldStarWrappers, product.rating);
+        card.querySelector(".discounted-price").textContent = product.price + "$";
+        // card.querySelector(".without-discount-price").textContent = Math.floor(product.price / (1 - (product.discountPercentage / 100))) + "$";
+        ProductList.append(card);
+
+    })
+
 
 }

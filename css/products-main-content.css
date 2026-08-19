@@ -159,9 +159,9 @@
 
 .products-cards-container {
     flex: 1 0 68%;
+    display: flex;
+    flex-direction: column;
 }
-
-
 
 .product-card-list {
     display: flex;

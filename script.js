@@ -1,24 +1,19 @@
-import { headerNavbarBtnEventApplier , FAQEventApplier , homepageCardsScrollBtnEventApplier , timer , overlayDisplayCheck } from "./modules/ui.js";
+import { headerNavbarBtnEventApplier, FAQEventApplier, homepageCardsScrollBtnEventApplier, timer, overlayDisplayCheck, homePageFeaturedProducts, homePageSpecialOffer } from "./modules/ui.js";
 import { getDataFromAPI } from "./modules/api.js";
-import { filterByDiscount, filterByRating } from "./modules/filterData.js";
-import { renderFeaturedProduct, renderSpecialOffer } from "./modules/renderElements.js";
-import { state, clearAllFilters } from "./modules/state.js";
-import {searchSuggestionEventApplier} from "./modules/search.js"
+import { searchSuggestionEventApplier } from "./modules/search.js"
+import { renderProductCard } from "./modules/renderElements.js";
+import { state } from "./modules/state.js";
 
 
 async function getDataFromAPIInit() {
     await getDataFromAPI();
-    filterByRating();
-    renderFeaturedProduct();
-    clearAllFilters();
-    filterByDiscount();
-    renderSpecialOffer();
-    clearAllFilters();
-
-    
+    searchSuggestionEventApplier();
+    homePageFeaturedProducts();
+    homePageSpecialOffer();
+    renderProductCard(state.allProducts , 1);
 }
-searchSuggestionEventApplier();
 getDataFromAPIInit();
+
 headerNavbarBtnEventApplier();
 homepageCardsScrollBtnEventApplier();
 FAQEventApplier();

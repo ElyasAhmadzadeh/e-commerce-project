@@ -1,9 +1,9 @@
 export const state = {
     allProducts:[] ,
     cartProducts:[] ,
-    filteredProducts: []
+    StagedProducts: []
 }
 
-export function clearAllFilters(){
-    state.filteredProducts.length = 0;
+export function clearStagedProducts(){
+    state.StagedProducts.length = 0;
 }

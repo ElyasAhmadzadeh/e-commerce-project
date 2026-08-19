@@ -1,3 +1,7 @@
+import { filterByRating, filterByDiscount } from "./filterData.js"
+import { renderFeaturedProduct, renderSpecialOffer } from "./renderElements.js";
+import { clearStagedProducts, state } from "./state.js";
+
 export function headerNavbarBtnEventApplier() {
     const btn = document.querySelector(".header-nav-btn");
     btn.addEventListener("click", navbarActivator)
@@ -17,6 +21,17 @@ function navbarActivator() {
         navbar.classList.remove("navbar--active");
     })
 
+}
+
+export function homePageFeaturedProducts() {
+    filterByRating();
+    renderFeaturedProduct(state.StagedProducts);
+    clearStagedProducts();
+}
+export function homePageSpecialOffer() {
+    filterByDiscount();
+    renderSpecialOffer(state.StagedProducts);
+    clearStagedProducts();
 }
 
 export function FAQEventApplier() {

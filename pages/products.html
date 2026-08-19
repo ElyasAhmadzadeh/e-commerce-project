@@ -157,278 +157,45 @@
                 </div>
                 <div class="products-cards-container py-3">
                     <ul class="w-100 product-card-list list-unstyled">
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
+                        <template id="productItemTemplate">
+                            <li class="product-item">
+                                <article class="article-container" data-product-id="product-id">
+                                    <div class="product-image products-page-product-image">
+                                        <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+                                            alt="product-image">
                                     </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
+                                    <div class="product-description py-2">
+                                        <h5 class=" product-title px-2 ">iPhone 5s</h5>
+                                        <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for
+                                            its
+                                            compact design and advanced features during its release. While it's an older
+                                            model, it still provides a reliable user experience.</p>
+                                        <div class=" rating px-2 "><span
+                                                class="rating-value fp-rating-value">2.83</span>
+                                            <ul class=" rating-stars-icon list-unstyled list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i><span
+                                                        class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i><span
+                                                        class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i><span
+                                                        class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i><span
+                                                        class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i><span
+                                                        class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
+                                            </ul>
+                                        </div>
+                                        <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
+                                        </h6>
                                     </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
-                        <li class="product-item">
-                            <article data-product-id="product-id">
-                                <div class="product-image products-page-product-image">
-                                    <img src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                                        alt="product-image">
-                                </div>
-                                <div class="product-description py-2">
-                                    <h5 class=" product-title px-2 ">iPhone 5s</h5>
-                                    <p class=" product-text px-2 ">The iPhone 5s is a classic smartphone known for its
-                                        compact design and advanced features during its release. While it's an older
-                                        model, it still provides a reliable user experience.</p>
-                                    <div class=" rating px-2 "><span class="rating-value fp-rating-value">2.83</span>
-                                        <ul class=" rating-stars-icon list-unstyled list-inline">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class=" gold-star-wrapper"><i class="fa fa-star"></i></span>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i><span
-                                                    class="gold-star-wrapper"><i class="fa fa-star"></i></span></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class=" product-price p-3"><span class="discounted-price pe-2">199.99</span>
-                                    </h6>
-                                </div>
-                                <a href="" role="button" class="product-view-link my-2">view <i class="fa fa-eye"></i></a>
-                            </article>
-                        </li>
+                                    <a href="" role="button" class="product-view-link my-2">view <i
+                                            class="fa fa-eye"></i></a>
+                                </article>
+                            </li>
+                        </template>
                     </ul>
                 </div>
             </div>
