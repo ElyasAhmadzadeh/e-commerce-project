@@ -1,6 +1,4 @@
 
-
-
 export function renderFeaturedProduct(data) {
     const FPTemplate = document.querySelector("#featuredProductsTemplate");
     const FPList = document.querySelector(".featured-products-list");
@@ -70,6 +68,7 @@ export function renderProductCard(data, pageNumber = 1) {
     const start = (pageNumber - 1) * ITEMS_PER_PAGE;
     const end = start + ITEMS_PER_PAGE
 
+    renderPagination(data, ITEMS_PER_PAGE);
 
     if (!ProductsTemplate || !ProductList)
         return;
@@ -92,5 +91,20 @@ export function renderProductCard(data, pageNumber = 1) {
 
     })
 
+
+}
+
+function renderPagination(data, itemsPerPage) {
+    const dataLength = data.length;
+    const paginationItemCount = Math.ceil(dataLength / itemsPerPage);
+    const paginationList = document.querySelector(".pagination-list");
+    if (!paginationList)
+        return;
+
+    paginationList.innerHTML = "";
+    for (let i = 0; i < paginationItemCount; i++) {
+        const paginationEL = `<li class="m-0 p-1 text-center pagination-item"><a href="" class="pagination-link">${i + 1}</a></li>`;
+        paginationList.insertAdjacentHTML("beforeend", paginationEL);
+    }
 
 }

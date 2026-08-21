@@ -1,7 +1,8 @@
 export const state = {
     allProducts:[] ,
     cartProducts:[] ,
-    StagedProducts: []
+    StagedProducts: [] ,
+    currentPageNumber: 1
 }
 
 export function clearStagedProducts(){

@@ -203,6 +203,29 @@
     margin-right: auto;
 }
 
+.pagination-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.pagination-item{
+    flex: 0 0 35px;
+    border: 2px solid var(--color-border);
+    background-color: white;
+}
+
+.pagination-link{
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
 
 
 
