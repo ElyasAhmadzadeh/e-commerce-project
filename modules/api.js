@@ -12,7 +12,7 @@ export async function getDataFromAPI() {
     data.forEach(categoryProductObj => {
         dataArray = dataArray.concat(categoryProductObj.products);
     })
-    state.allProducts = dataArray;
-    console.log(state.allProducts);
-    
+    state.allProducts = dataArray.map(item =>{return item});
+    state.StagedProducts = dataArray.map(item =>{return item});
+
 }

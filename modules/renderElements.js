@@ -1,3 +1,6 @@
+import { paginationItemsEventApplier } from "./pagination.js";
+import { ITEMS_PER_PAGE } from "./common.js";
+
 
 export function renderFeaturedProduct(data) {
     const FPTemplate = document.querySelector("#featuredProductsTemplate");
@@ -62,20 +65,22 @@ function goldStarsRender(starsEl, rating) {
 }
 
 export function renderProductCard(data, pageNumber = 1) {
-    const ITEMS_PER_PAGE = 8;
     const ProductsTemplate = document.querySelector("#productItemTemplate");
     const ProductList = document.querySelector(".product-card-list");
     const start = (pageNumber - 1) * ITEMS_PER_PAGE;
     const end = start + ITEMS_PER_PAGE
 
-    renderPagination(data, ITEMS_PER_PAGE);
 
     if (!ProductsTemplate || !ProductList)
         return;
 
 
     const copyFilteredProducts = data.map(item => { return item });
-    console.log(copyFilteredProducts);
+    for (const child of Array.from(ProductList.children)) {
+        if (child.classList.contains("product-item"))
+            child.remove();
+    }
+
     copyFilteredProducts.slice(start, end).forEach(product => {
         const card = ProductsTemplate.content.cloneNode(true);
         card.querySelector(".article-container").setAttribute("data-product-id", product.id);
@@ -87,14 +92,15 @@ export function renderProductCard(data, pageNumber = 1) {
         goldStarsRender(goldStarWrappers, product.rating);
         card.querySelector(".discounted-price").textContent = product.price + "$";
         // card.querySelector(".without-discount-price").textContent = Math.floor(product.price / (1 - (product.discountPercentage / 100))) + "$";
-        ProductList.append(card);
+        ProductList.appendChild(card);
+
 
     })
 
 
 }
 
-function renderPagination(data, itemsPerPage) {
+export function renderPagination(data, itemsPerPage) {
     const dataLength = data.length;
     const paginationItemCount = Math.ceil(dataLength / itemsPerPage);
     const paginationList = document.querySelector(".pagination-list");
@@ -103,8 +109,10 @@ function renderPagination(data, itemsPerPage) {
 
     paginationList.innerHTML = "";
     for (let i = 0; i < paginationItemCount; i++) {
-        const paginationEL = `<li class="m-0 p-1 text-center pagination-item"><a href="" class="pagination-link">${i + 1}</a></li>`;
+        const paginationEL = `<li class="m-0 p-1 text-center pagination-item ${i==0?"active":""}"><a href="" class="pagination-link">${i + 1}</a></li>`;
         paginationList.insertAdjacentHTML("beforeend", paginationEL);
     }
+
+    paginationItemsEventApplier();
 
 }

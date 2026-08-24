@@ -1,10 +1,13 @@
 export const state = {
-    allProducts:[] ,
-    cartProducts:[] ,
-    StagedProducts: [] ,
+    allProducts: [],
+    cartProducts: [],
+    StagedProducts: [],
     currentPageNumber: 1
 }
 
-export function clearStagedProducts(){
+export function clearStagedProducts() {
     state.StagedProducts.length = 0;
+    state.StagedProducts = state.allProducts.map(item => {
+        return item;
+    });
 }
