@@ -74,6 +74,8 @@ export function renderProductCard(data, pageNumber = 1) {
     if (!ProductsTemplate || !ProductList)
         return;
 
+    const productNumber = document.querySelector(".products-number");
+    productNumber.textContent = data.length;
 
     const copyFilteredProducts = data.map(item => { return item });
     for (const child of Array.from(ProductList.children)) {
@@ -109,7 +111,7 @@ export function renderPagination(data, itemsPerPage) {
 
     paginationList.innerHTML = "";
     for (let i = 0; i < paginationItemCount; i++) {
-        const paginationEL = `<li class="m-0 p-1 text-center pagination-item ${i==0?"active":""}"><a href="" class="pagination-link">${i + 1}</a></li>`;
+        const paginationEL = `<li class="m-0 p-1 text-center pagination-item ${i == 0 ? "active" : ""}"><a href="" class="pagination-link">${i + 1}</a></li>`;
         paginationList.insertAdjacentHTML("beforeend", paginationEL);
     }
 
