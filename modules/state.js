@@ -2,6 +2,8 @@ export const state = {
     allProducts: [],
     cartProducts: [],
     StagedProducts: [],
+    hasFilter: false,
+    filteredProducts:[],
     currentPageNumber: 1
 }
 

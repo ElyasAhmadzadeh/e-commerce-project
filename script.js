@@ -5,7 +5,7 @@ import { renderProductCard, renderPagination } from "./modules/renderElements.js
 import { state } from "./modules/state.js";
 import { ITEMS_PER_PAGE } from "./modules/common.js";
 import { paginationBtnEventApplier } from "./modules/pagination.js"
-import { productToolbarSortEventApplier } from "./modules/filterData.js"
+import { productToolbarSortEventApplier, productsPageFilterFormEventApplier } from "./modules/filterData.js"
 
 const page = document.body.dataset.page;
 
@@ -24,10 +24,11 @@ async function APIDataRelatedInit() {
 }
 
 function productsPageInit() {
-    if (page === "products")
+    if (page === "products") {
         productToolbarSortEventApplier();
+        productsPageFilterFormEventApplier();
+    }
 }
-
 
 function UIInit() {
     headerNavbarBtnEventApplier();

@@ -1,4 +1,4 @@
-import { filterByRating, filterByDiscount } from "./filterData.js"
+import { sortByRating, sortByDiscount } from "./filterData.js"
 import { renderFeaturedProduct, renderSpecialOffer } from "./renderElements.js";
 import { clearStagedProducts, state } from "./state.js";
 
@@ -24,12 +24,12 @@ function navbarActivator() {
 }
 
 export function homePageFeaturedProducts() {
-    filterByRating();
+    sortByRating();
     renderFeaturedProduct(state.StagedProducts);
     clearStagedProducts();
 }
 export function homePageSpecialOffer() {
-    filterByDiscount();
+    sortByDiscount();
     renderSpecialOffer(state.StagedProducts);
     clearStagedProducts();
 }

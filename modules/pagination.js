@@ -22,7 +22,10 @@ function paginationHandler(targetEl, paginationList) {
     targetPageEL.classList.add("active");
     const targetPage = targetPageEL.querySelector(".pagination-link").textContent;
     state.currentPageNumber = targetPage;
-    renderProductCard(state.StagedProducts, state.currentPageNumber);
+    if (state.hasFilter)
+        renderProductCard(state.filteredProducts, state.currentPageNumber);
+    else
+        renderProductCard(state.StagedProducts, state.currentPageNumber);
 
 }
 

@@ -1,20 +1,26 @@
 import { state } from "./state.js";
+import { renderProductCard, renderPagination } from "./renderElements.js";
+import { ITEMS_PER_PAGE } from "./common.js";
 
-export function filterByRating() {
+export function sortByRating() {
     const copyAllProducts = state.allProducts.map(item => { return item });
-    if (state.StagedProducts.length == 0) {
+    if (state.hasFilter) {
+        state.filteredProducts = state.filteredProducts.sort(function (a, b) { return b.rating - a.rating });
+    }
+    else if (state.StagedProducts.length == 0) {
         state.StagedProducts = copyAllProducts.sort(function (a, b) { return b.rating - a.rating });
     }
     else {
         state.StagedProducts = state.StagedProducts.sort(function (a, b) { return b.rating - a.rating });
     }
 
-    console.log(state.StagedProducts);
-
 }
-export function filterByDiscount() {
+export function sortByDiscount() {
     const copyAllProducts = state.allProducts.map(item => { return item });
-    if (state.StagedProducts.length == 0) {
+    if (state.hasFilter) {
+        state.filteredProducts = state.filteredProducts.sort(function (a, b) { return b.discountPercentage - a.discountPercentage });
+    }
+    else if (state.StagedProducts.length == 0) {
         state.StagedProducts = copyAllProducts.sort(function (a, b) { return b.discountPercentage - a.discountPercentage });
     }
     else {
@@ -25,20 +31,26 @@ export function filterByDiscount() {
 
 function sortByHigherPrice() {
     const copyAllProducts = state.allProducts.map(item => { return item });
-    if (state.StagedProducts.length == 0) {
+    if (state.hasFilter) {
+        state.filteredProducts = state.filteredProducts.sort(function (a, b) { return b.price - a.price });
+    }
+    else if (state.StagedProducts.length == 0) {
         state.StagedProducts = copyAllProducts.sort(function (a, b) { return b.price - a.price });
     }
     else {
-        state.StagedProducts = state.StagedProducts.sort(function (a, b) { return b.price - a.price })
+        state.StagedProducts = state.StagedProducts.sort(function (a, b) { return b.price - a.price });
     }
 }
 function sortByLowerPrice() {
     const copyAllProducts = state.allProducts.map(item => { return item });
-    if (state.StagedProducts.length == 0) {
+    if (state.hasFilter) {
+        state.filteredProducts = state.filteredProducts.sort(function (a, b) { return a.price - b.price });
+    }
+    else if (state.StagedProducts.length == 0) {
         state.StagedProducts = copyAllProducts.sort(function (a, b) { return a.price - b.price });
     }
     else {
-        state.StagedProducts = state.StagedProducts.sort(function (a, b) { return a.price - b.price })
+        state.StagedProducts = state.StagedProducts.sort(function (a, b) { return a.price - b.price });
     }
 }
 
@@ -50,9 +62,61 @@ export function productToolbarSortEventApplier() {
 }
 
 function toolbarSelectionSortHandler(selection) {
-console.log(selection.value);
+    state.currentPageNumber = 1;
+    switch (selection.value) {
+        case "all":
+            state.StagedProducts = state.allProducts.map(item => {
+                return item;
+            });
+            break;
+        case "expensive":
+            sortByHigherPrice();
+            break;
+        case "cheap":
+            sortByLowerPrice();
+            break;
+        case "topRating":
+            sortByRating();
+            break;
+        case "topDiscount":
+            sortByDiscount();
+            break;
+    }
+    if (state.hasFilter)
+        renderProductCard(state.filteredProducts, state.currentPageNumber);
+    else
+        renderProductCard(state.StagedProducts, state.currentPageNumber);
+}
+
+export function productsPageFilterFormEventApplier() {
+    const form = document.querySelector(".filters-form");
+    form.addEventListener("submit", function (event) {
+        filtersFormHandler(event.target);
+    });
+}
+function filtersFormHandler(form) {
+    let filterCheck = state.hasFilter;
+    categoryCheckboxes(form , filterCheck);
+    renderPagination(state.filteredProducts, ITEMS_PER_PAGE);
+    renderProductCard(state.filteredProducts, state.currentPageNumber);
+
+
 
 }
 
-export async function filterByCategoryName(categoryName) {
+function categoryCheckboxes(form , filterCheck) {
+    const categoryCheckboxes = Array.from(form.querySelectorAll(".category-checkbox"));
+    const checkedCheckboxes = categoryCheckboxes.filter(item => {
+        return item.checked;
+    });
+    if (checkedCheckboxes.length == 0) {
+        filterCheck = false;
+        return;
+    }
+    const checkedValues = checkedCheckboxes.map(item => { return item.value });
+    state.filteredProducts = state.StagedProducts.filter(item => {
+        return checkedValues.includes(item.category);
+    });
+    state.currentPageNumber = 1;
+    state.hasFilter = true;
 }
