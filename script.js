@@ -6,6 +6,7 @@ import { state } from "./modules/state.js";
 import { ITEMS_PER_PAGE } from "./modules/common.js";
 import { paginationBtnEventApplier } from "./modules/pagination.js"
 import { productToolbarSortEventApplier, productsPageFilterFormEventApplier } from "./modules/filterData.js"
+import { productPageURLCategoryHandler, productPageURLSortHandler } from "./modules/URL.js"
 
 const page = document.body.dataset.page;
 
@@ -27,6 +28,8 @@ function productsPageInit() {
     if (page === "products") {
         productToolbarSortEventApplier();
         productsPageFilterFormEventApplier();
+        productPageURLCategoryHandler();
+        productPageURLSortHandler();
     }
 }
 

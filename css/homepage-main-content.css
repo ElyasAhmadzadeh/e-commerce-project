@@ -510,6 +510,7 @@ html[lang="fa"] .offer-discount {
     font-weight: 600;
     border: 2px solid var(--color-border);
     background-color: white;
+    transition: background-color 250ms ease;
 }
 
 .accordion-title {
@@ -537,13 +538,22 @@ html[lang="fa"] .offer-discount {
 
 .accordion-description {
     max-height: 0;
-    transition: max-height 250ms ease;
+    transition: max-height 250ms ease, background-color 250ms ease;
     overflow: hidden;
-    background-color: rgba(161, 184, 233, 0.425);
+    background-color: white;
 }
 
 .accordion-description.accordion--active {
+    background-color: rgba(208, 228, 248, 0.986);
     max-height: 300px;
+    border: 2px solid rgba(100,100,255,.6) !important;
+    border-top: none !important;
+}
+
+.accordion-title-box.accordion--active {
+    background-color: rgba(208, 228, 248, 0.986);
+    border: 2px solid rgba(100, 167, 255, 0.6);
+    border-bottom: none;
 }
 
 .brands-slide-show {

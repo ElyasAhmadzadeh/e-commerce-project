@@ -61,7 +61,7 @@ export function productToolbarSortEventApplier() {
     })
 }
 
-function toolbarSelectionSortHandler(selection) {
+export function toolbarSelectionSortHandler(selection) {
     state.currentPageNumber = 1;
     switch (selection.value) {
         case "all":
@@ -94,7 +94,7 @@ export function productsPageFilterFormEventApplier() {
         filtersFormHandler(event.target);
     });
 }
-function filtersFormHandler(form) {
+export function filtersFormHandler(form) {
     state.hasFilter = false;
     categoryCheckboxes(form);
     priceRangeFilter(form);

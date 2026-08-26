@@ -44,6 +44,7 @@ export function FAQEventApplier() {
     accordionTitles.forEach(item => {
         item.addEventListener("click", function (event) {
             const clickedEL = event.target.closest(".accordion-item-box");
+            clickedEL.querySelector(".accordion-title-box").classList.toggle("accordion--active");
             clickedEL.querySelector(".accordion-icon").classList.toggle("accordion-icon--active");
             clickedEL.querySelector(".accordion-description").classList.toggle("accordion--active");
         })
