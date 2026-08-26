@@ -148,3 +148,7 @@ export function overlayDisplayCheck() {
 
     })
 }
+
+export function priceRangeInputEventApplier(){
+    const priceRangeInput = document.querySelector(".form-price-range");
+}

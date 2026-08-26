@@ -95,22 +95,27 @@ export function productsPageFilterFormEventApplier() {
     });
 }
 function filtersFormHandler(form) {
-    let filterCheck = state.hasFilter;
-    categoryCheckboxes(form , filterCheck);
-    renderPagination(state.filteredProducts, ITEMS_PER_PAGE);
-    renderProductCard(state.filteredProducts, state.currentPageNumber);
+    categoryCheckboxes(form);
+    if (state.hasFilter) {
+        renderPagination(state.filteredProducts, ITEMS_PER_PAGE);
+        renderProductCard(state.filteredProducts, state.currentPageNumber);
+    }
+    else {
+        renderPagination(state.StagedProducts, ITEMS_PER_PAGE);
+        renderProductCard(state.StagedProducts, state.currentPageNumber);
+    }
 
 
 
 }
 
-function categoryCheckboxes(form , filterCheck) {
+function categoryCheckboxes(form) {
     const categoryCheckboxes = Array.from(form.querySelectorAll(".category-checkbox"));
     const checkedCheckboxes = categoryCheckboxes.filter(item => {
         return item.checked;
     });
     if (checkedCheckboxes.length == 0) {
-        filterCheck = false;
+        state.hasFilter = false;
         return;
     }
     const checkedValues = checkedCheckboxes.map(item => { return item.value });

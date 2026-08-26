@@ -4,7 +4,8 @@ export const state = {
     StagedProducts: [],
     hasFilter: false,
     filteredProducts:[],
-    currentPageNumber: 1
+    currentPageNumber: 1 ,
+    productPagePaginationMaxItems: 0
 }
 
 export function clearStagedProducts() {

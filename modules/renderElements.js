@@ -1,5 +1,6 @@
 import { paginationItemsEventApplier } from "./pagination.js";
 import { ITEMS_PER_PAGE } from "./common.js";
+import { state } from "./state.js";
 
 
 export function renderFeaturedProduct(data) {
@@ -103,18 +104,21 @@ export function renderProductCard(data, pageNumber = 1) {
 }
 
 export function renderPagination(data, itemsPerPage) {
+    console.log("render pagination called");
+    
     const dataLength = data.length;
     const paginationItemCount = Math.ceil(dataLength / itemsPerPage);
+    state.productPagePaginationMaxItems = paginationItemCount;
     const paginationList = document.querySelector(".pagination-list");
     if (!paginationList)
         return;
 
     paginationList.innerHTML = "";
-    for (let i = 0; i < paginationItemCount; i++) {
-        const paginationEL = `<li class="m-0 p-1 text-center pagination-item ${i == 0 ? "active" : ""}"><a href="" class="pagination-link">${i + 1}</a></li>`;
+    for (let i = 0; i < state.productPagePaginationMaxItems; i++) {
+        const paginationEL = `<li class="m-0 p-1 text-center pagination-item ${i+1 == state.currentPageNumber ? "active" : ""}"><a href="" class="pagination-link">${i + 1}</a></li>`;
         paginationList.insertAdjacentHTML("beforeend", paginationEL);
     }
-
+    
     paginationItemsEventApplier();
 
 }

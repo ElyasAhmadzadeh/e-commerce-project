@@ -20,25 +20,29 @@ function paginationHandler(targetEl, paginationList) {
     const targetPageEL = targetEl.closest(".pagination-item");
 
     targetPageEL.classList.add("active");
+
     const targetPage = targetPageEL.querySelector(".pagination-link").textContent;
     state.currentPageNumber = targetPage;
+
     if (state.hasFilter)
         renderProductCard(state.filteredProducts, state.currentPageNumber);
     else
         renderProductCard(state.StagedProducts, state.currentPageNumber);
+
+
 
 }
 
 export function paginationBtnEventApplier() {
     const prevBtn = document.querySelector(".pagination-prev-btn");
     const nextBtn = document.querySelector(".pagination-next-btn");
-    const paginationItems = Array.from(document.querySelectorAll(".pagination-item"));
     const paginationList = document.querySelector(".pagination-list");
 
 
 
     prevBtn.addEventListener("click", function (event) {
         event.preventDefault();
+        const paginationItems = Array.from(document.querySelectorAll(".pagination-item"));
         if (state.currentPageNumber > 1) {
             state.currentPageNumber--;
             const targetEL = paginationItems.find(item => {
@@ -50,7 +54,8 @@ export function paginationBtnEventApplier() {
     })
     nextBtn.addEventListener("click", function (event) {
         event.preventDefault();
-        if (state.currentPageNumber < 5) {
+        const paginationItems = Array.from(document.querySelectorAll(".pagination-item"));
+        if (state.currentPageNumber < state.productPagePaginationMaxItems) {
             state.currentPageNumber++;
             const targetEL = paginationItems.find(item => {
                 return item.textContent == state.currentPageNumber;
