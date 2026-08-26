@@ -1,6 +1,8 @@
 import { sortByRating, sortByDiscount } from "./filterData.js"
 import { renderFeaturedProduct, renderSpecialOffer } from "./renderElements.js";
 import { clearStagedProducts, state } from "./state.js";
+import { MAXIMUM_PRODUCT_PRICE, MINIMUM_PRODUCT_PRICE } from "./common.js";
+
 
 export function headerNavbarBtnEventApplier() {
     const btn = document.querySelector(".header-nav-btn");
@@ -149,6 +151,17 @@ export function overlayDisplayCheck() {
     })
 }
 
-export function priceRangeInputEventApplier(){
+export function priceRangeInputEventApplier() {
     const priceRangeInput = document.querySelector(".form-price-range");
+    priceRangeInput.addEventListener("input", function () { filtersFormRangeHandler(priceRangeInput) });
+    filtersFormRangeHandler(priceRangeInput);
+
+}
+
+function filtersFormRangeHandler(priceRangeInput) {
+    const rangeValueDisplay = document.querySelector(".min-price-value");
+    const value = priceRangeInput.value;
+    const progressedPercentage = Math.floor(((value - MINIMUM_PRODUCT_PRICE) / (MAXIMUM_PRODUCT_PRICE - MINIMUM_PRODUCT_PRICE)) * 100);
+    priceRangeInput.style.setProperty('--price-range-progress', `${progressedPercentage}%`);
+    rangeValueDisplay.textContent = value + "$"
 }

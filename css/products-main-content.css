@@ -131,7 +131,7 @@
 }
 
 .form-price-range::-webkit-slider-runnable-track {
-    background-image: linear-gradient(to right, rgba(78, 148, 240, 0.716) 0%, rgba(78, 148, 240, 0.716) var(--price-range-progress, 50%), transparent var(--price-range-progress, 50%), transparent 100%);
+    background-image: linear-gradient(to right, rgba(78, 148, 240, 0.716) 0%, rgba(78, 148, 240, 0.716) var(--price-range-progress, 0%), transparent var(--price-range-progress, 0%), transparent 100%);
 }
 
 .price-range-value {

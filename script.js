@@ -1,4 +1,4 @@
-import { headerNavbarBtnEventApplier, FAQEventApplier, homepageCardsScrollBtnEventApplier, timer, overlayDisplayCheck, homePageFeaturedProducts, homePageSpecialOffer } from "./modules/ui.js";
+import { headerNavbarBtnEventApplier, FAQEventApplier, homepageCardsScrollBtnEventApplier, timer, overlayDisplayCheck, homePageFeaturedProducts, homePageSpecialOffer, priceRangeInputEventApplier } from "./modules/ui.js";
 import { getDataFromAPI } from "./modules/api.js";
 import { searchSuggestionEventApplier } from "./modules/search.js"
 import { renderProductCard, renderPagination } from "./modules/renderElements.js";
@@ -37,6 +37,9 @@ function UIInit() {
         homepageCardsScrollBtnEventApplier();
         FAQEventApplier();
         timer();
+    }
+    if (page === "products") {
+        priceRangeInputEventApplier();
     }
 }
 

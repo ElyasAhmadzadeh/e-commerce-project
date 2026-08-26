@@ -1,6 +1,6 @@
 import { state } from "./state.js";
 import { renderProductCard, renderPagination } from "./renderElements.js";
-import { ITEMS_PER_PAGE } from "./common.js";
+import { ITEMS_PER_PAGE, MAXIMUM_PRODUCT_PRICE } from "./common.js";
 
 export function sortByRating() {
     const copyAllProducts = state.allProducts.map(item => { return item });
@@ -95,7 +95,9 @@ export function productsPageFilterFormEventApplier() {
     });
 }
 function filtersFormHandler(form) {
+    state.hasFilter = false;
     categoryCheckboxes(form);
+    priceRangeFilter(form);
     if (state.hasFilter) {
         renderPagination(state.filteredProducts, ITEMS_PER_PAGE);
         renderProductCard(state.filteredProducts, state.currentPageNumber);
@@ -115,13 +117,32 @@ function categoryCheckboxes(form) {
         return item.checked;
     });
     if (checkedCheckboxes.length == 0) {
-        state.hasFilter = false;
         return;
     }
     const checkedValues = checkedCheckboxes.map(item => { return item.value });
     state.filteredProducts = state.StagedProducts.filter(item => {
         return checkedValues.includes(item.category);
     });
+    state.currentPageNumber = 1;
+    state.hasFilter = true;
+}
+
+function priceRangeFilter(form) {
+    const priceRangeInput = document.querySelector(".form-price-range");
+    const inputValue = Math.floor(priceRangeInput.value);
+    if (inputValue == 0)
+        return;
+
+    if (state.hasFilter) {
+        state.filteredProducts = state.filteredProducts.filter(item => {
+            return item.price > inputValue && item.price < MAXIMUM_PRODUCT_PRICE;
+        });
+    }
+    else {
+        state.filteredProducts = state.StagedProducts.filter(item => {
+            return item.price > inputValue && item.price < MAXIMUM_PRODUCT_PRICE;
+        });
+    }
     state.currentPageNumber = 1;
     state.hasFilter = true;
 }
