@@ -189,21 +189,29 @@ html[lang="fa"] .logo-text {
     padding: 5px;
     background-color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    border-radius: .4rem;
 }
 
 .search-suggestion-item:hover {
     background-color: rgba(15, 23, 42, .1);
 }
 
-.suggestion-stock-status {
-    color: var(--color-text-secondary);
+.search-suggestion-item>a {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.stock-status {
+    color: var(--color-text-secondary) !important;
     font-size: .75rem;
 }
 
 .suggestion-title {
-    color: var(--color-text-primary);
+    color: var(--color-text-primary) !important;
     font-size: 1.05rem;
     font-weight: 600;
 }

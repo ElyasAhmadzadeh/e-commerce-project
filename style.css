@@ -4,6 +4,7 @@
 @import url(./css/homepage-main-content.css);
 @import url(./css/products-main-content.css);
 @import url(./css/footer.css);
+@import url(./css/product-detail.css);
 
 * {
     margin: 0;

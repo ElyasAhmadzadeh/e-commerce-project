@@ -1,7 +1,7 @@
 import { sortByRating, sortByDiscount } from "./filterData.js"
 import { renderFeaturedProduct, renderSpecialOffer } from "./renderElements.js";
 import { clearStagedProducts, state } from "./state.js";
-import { MAXIMUM_PRODUCT_PRICE, MINIMUM_PRODUCT_PRICE } from "./common.js";
+import { MAXIMUM_PRODUCT_PRICE, MINIMUM_PRODUCT_PRICE, page } from "./common.js";
 
 
 export function headerNavbarBtnEventApplier() {
@@ -86,16 +86,25 @@ function scrollPrev(event) {
 export function renderSuggestionList(results) {
     const container = document.querySelector(".search-suggestion");
     const list = container.querySelector(".search-suggestion-list");
-    console.log(results);
+
 
 
 
     list.innerHTML = "";
     results.forEach(result => {
-        const suggestEL = `             <li class="search-suggestion-item" data-product-id = ${result.id}><span
-                                            class="suggestion-title">${result.title}</span><span class="stock-status">${result.availabilityStatus}</span>
-                                    </li>`;
-        list.insertAdjacentHTML("beforeend", suggestEL);
+
+        if (page === "homepage") {
+            const suggestEL = `             <li class="search-suggestion-item" data-product-id = ${result.id}><a href = "./pages/product.html?id=${result.id}"><span
+                                                class="suggestion-title">${result.title}</span><span class="stock-status">${result.availabilityStatus}</span></a>
+                                        </li>`;
+            list.insertAdjacentHTML("beforeend", suggestEL);
+        }
+        else {
+            const suggestEL = `             <li class="search-suggestion-item" data-product-id = ${result.id}><a href = "product.html?id=${result.id}"><span
+                                                class="suggestion-title">${result.title}</span><span class="stock-status">${result.availabilityStatus}</span></a>
+                                        </li>`;
+            list.insertAdjacentHTML("beforeend", suggestEL);
+        }
 
     });
     if (results.length == 0)
@@ -165,4 +174,67 @@ function filtersFormRangeHandler(priceRangeInput) {
     const progressedPercentage = Math.floor(((value - MINIMUM_PRODUCT_PRICE) / (MAXIMUM_PRODUCT_PRICE - MINIMUM_PRODUCT_PRICE)) * 100);
     priceRangeInput.style.setProperty('--price-range-progress', `${progressedPercentage}%`);
     rangeValueDisplay.textContent = value + "$"
+}
+
+export function productImageSelectionEventApplier() {
+    const imageList = document.querySelector(".image-list");
+    imageList.addEventListener("click", showImage);
+}
+function showImage(event) {
+    event.preventDefault();
+    const clickedEL = event.target;
+    const imageSource = clickedEL.src;
+    if (imageSource == undefined || !imageSource)
+        return;
+    const displayImage = document.querySelector(".image-display");
+    displayImage.src = imageSource;
+}
+
+export function quantityBtnsEventApplier() {
+    const plusBtn = document.querySelector(".plus-quantity");
+    const minusBtn = document.querySelector(".minus-quantity");
+    const input = document.querySelector(".quantity-number-input");
+    plusBtn.addEventListener("click", function () {
+        plusQuantity(input);
+    });
+    minusBtn.addEventListener("click", function () {
+        minusQuantity(input);
+    });
+
+}
+
+function plusQuantity(input) {
+    if (input.value < 10)
+        input.value++;
+}
+function minusQuantity(input) {
+    if (input.value > 1)
+        input.value--;
+}
+
+export function wishlistBtnToggler(element) {
+    console.log(element, "toggler worked");
+    console.log(state.bookmarkProducts);
+
+    const Btn = element.closest(".add-to-wishlist-btn")
+    Btn.classList.toggle("added-to-wishlist");
+    const text = element.querySelector(".add-to-wishlist-text") || element;
+    if (Btn.classList.contains("added-to-wishlist")) {
+        text.textContent = "Added to wishlist";
+    }
+    else {
+        text.textContent = "Add to wishlist";
+    }
+}
+
+export function cartCountShow() {
+    console.log(state.cartProducts);
+
+    const display = document.querySelector(".cart-count");
+    if (state.cartProducts.length === 0) {
+        display.textContent = "";
+        return;
+    }
+
+    display.textContent = `(${state.cartProducts.length})`;
 }

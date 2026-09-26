@@ -54,6 +54,15 @@ function sortByLowerPrice() {
     }
 }
 
+export function findProductById(id) {
+    const product = state.allProducts.find(item => {
+        return item.id == id;
+    });
+    if (!product)
+        throw new Error("product doesn't exist");
+    return product;
+}
+
 export function productToolbarSortEventApplier() {
     const toolbarSelection = document.querySelector("#filterProductsSelection");
     toolbarSelection.addEventListener("change", function (event) {

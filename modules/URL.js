@@ -1,5 +1,6 @@
-import { filtersFormHandler, sortByRating, sortByDiscount, toolbarSelectionSortHandler } from "./filterData.js"
+import { filtersFormHandler, sortByRating, sortByDiscount, toolbarSelectionSortHandler, findProductById } from "./filterData.js"
 import { state } from "./state.js";
+import { renderProductDetails } from "./renderElements.js";
 
 function getCategoryFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -9,6 +10,19 @@ function getCategoryFromURL() {
 function getSortSubjectFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('sortBy');
+}
+
+export function getProductIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+}
+
+export function productDetailsURLIdHandler() {
+    const urlId = getProductIdFromURL();
+    if (!urlId) return;
+    const product = findProductById(urlId);
+    renderProductDetails(product);
+
 }
 
 export function productPageURLCategoryHandler() {
@@ -57,7 +71,5 @@ function urlSortHandler(sortSubject) {
     const sortSelection = document.querySelector("#filterProductsSelection");
     sortSelection.value = sortSubject;
     toolbarSelectionSortHandler(sortSelection);
-
-    console.log(state);
 
 }

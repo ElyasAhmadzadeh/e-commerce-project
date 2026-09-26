@@ -12,7 +12,13 @@ export async function getDataFromAPI() {
     data.forEach(categoryProductObj => {
         dataArray = dataArray.concat(categoryProductObj.products);
     })
-    state.allProducts = dataArray.map(item =>{return item});
-    state.StagedProducts = dataArray.map(item =>{return item});
-
+    state.allProducts = dataArray.map(item => { return item });
+    state.StagedProducts = dataArray.map(item => { return item });
 }
+
+export async function getLocalData() {
+    const response = await fetch("../assets/productDetails.json");
+    const data = await response.json();
+    state.localData = data.map(item => { return item; });
+}
+

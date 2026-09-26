@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../fontawesome-free-7.1.0-web/css/all.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Document</title>
+</head>
+
+<body data-page="product-detail">
+    <header class="header">
+        <div class="container-fluid">
+            <section class="top-header row justify-content-between align-items-center py-1 px-0 p-lg-2">
+                <div class="phone-number-header col-12 col-sm-4 col-md-5">
+                    <span class="phone-number-icon px-1"><i class="fa fa-phone" aria-hidden="true"></i></span> <span
+                        class="phone-number"><a href="tel:+989127733445">+98 912 7733445</a></span>
+                </div>
+                <div class="contact-header-box col-12 col-sm-8 col-md-7">
+                    <a href="#" class="text-white contact-us"> <i class="fa fa-address-book pe-2"></i><span>Contact
+                            Us</span></a>
+                    <span class="email-address text-white"><span class="pe-2"><i
+                                class="fa fa-envelope"></i></span><span><a
+                                href="mailto:myecomerce@gmail.com">myecomerce@gmail.com</a></span></span>
+                </div>
+            </section>
+            <section class="primary-header row py-2 px-0">
+                <div class="overlay-box">
+                    <div class="overlay"></div>
+                </div>
+                <div class="logo-container col-10 col-sm-10 col-md-3">
+                    <a href="#"> <img src="../assets/commerce-business-and-finance-svgrepo-com.svg"
+                            class="logo-img img-thumbnail" alt="site logo"></a>
+                    <div class="logo-text">
+                        <h6>Technology Shop</h6>
+                        <span>Shop Smart, Live Better</span>
+                    </div>
+                </div>
+                <nav class="navbar-container col-md-9 px-1">
+                    <div class="search-category-container">
+                        <form action="#" class="header-search-form">
+                            <div class="input-group">
+                                <input type="search" class="header-search-input ps-2"
+                                    placeholder="what are you looking for?" name="" id="headerSearchInput">
+                                <button class="search-btn" type="submit" id="header-search-btn"><i
+                                        class="fa fa-search"></i></button>
+                            </div>
+                            <section class="search-suggestion p-2">
+                                <ul class="search-suggestion-list list-unstyled p-1">
+                                </ul>
+                            </section>
+                        </form>
+                        <div class="category-selection py-2 py-md-0">
+                            <button type="button" class="dropdown-category-btn dropdown-toggle"
+                                id="headerCategoryDropDownBtn" data-bs-toggle="dropdown">Categories</button>
+                            <ul class="dropdown-menu mt-1 mt-md-2" aria-labelledby="headerCategoryDropDownBtn">
+                                <li><a href="products.html?category=smartphones" class="dropdown-item">Smartphones</a>
+                                </li>
+                                <li><a href="products.html?category=laptops" class="dropdown-item">Laptops</a>
+                                </li>
+                                <li><a href="products.html?category=tablets" class="dropdown-item">Tablets</a>
+                                </li>
+                                <li><a href="products.html?category=mobile-accessories" class="dropdown-item">Mobile
+                                        Accessories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lang-cart-container">
+                        <button type="button" class="dropdown-lang-btn dropdown-toggle" id="headerLangDropDownBtn"
+                            data-bs-toggle="dropdown">Language</button>
+                        <ul class="dropdown-menu mt-1 mt-md-2" aria-labelledby="headerLangDropDownBtn">
+                            <li><a href="#" class="dropdown-item"><img
+                                        src="../assets/flag-for-flag-united-kingdom-svgrepo-com.svg"
+                                        class="flag-icon pe-2" alt=""><span>English</span></a></li>
+                            <li><a href="#" class="dropdown-item"><img
+                                        src="../assets/flag-for-flag-iran-svgrepo-com.svg" class="flag-icon pe-2"
+                                        alt=""><span>Farsi</span></a></li>
+                        </ul>
+                        <a href="#" class="cart-btn text-center"><i class="fa fa-cart-shopping"></i><span
+                                class="ps-1">Cart <span class="cart-count"></span></span></a>
+                    </div>
+                </nav>
+                <button type="button" class="header-nav-btn d-inline-block d-md-none col-1 me-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </section>
+        </div>
+    </header>
+    <main class="product-main container-fluid">
+        <nav class="row breadcrump-container py-3" aria-label="breadcrumb">
+            <ol class="col-12 m-0 ps-3 ps-md-5 breadcrumb-list list-unstyled">
+                <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                <li class="breadcrumb-item"><a href="./products.html" class="breadcrumb-link">Products</a></li>
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link current-page"></a></li>
+            </ol>
+        </nav>
+        <section class="row product-main-info">
+            <div class="product-images-slider p-1 col-12 col-lg-5">
+                <ul class="image-display-list  w-100 list-unstyled">
+                    <li class="image-display-item w-100"><img src="" class="image-display" alt="product-image"></li>
+
+                </ul>
+                <ul class="image-list my-0 ms-2 list-unstyled">
+                </ul>
+            </div>
+            <div class="product-description p-3 col-12 col-lg-7">
+                <div class="first-view-details p-4">
+                    <h3 class="product-name mb-0"></h3>
+                    <h4 class="product-company"></h4>
+                    <div class="rating-container">
+                        <span class="ratring-value"></span>
+                        <ul class=" rating-stars-icon list-unstyled list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i><span class="gold-star-wrapper"><i
+                                        class="fa fa-star"></i></span>
+                            </li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i><span class="gold-star-wrapper"><i
+                                        class="fa fa-star"></i></span>
+                            </li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i><span class="gold-star-wrapper"><i
+                                        class="fa fa-star"></i></span>
+                            </li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i><span class="gold-star-wrapper"><i
+                                        class="fa fa-star"></i></span></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i><span class="gold-star-wrapper"><i
+                                        class="fa fa-star"></i></span></li>
+
+                        </ul>
+                    </div>
+                    <div class="status-container">
+                        <span class="status-badge in-stuck py-1 px-2">In Stock</span>
+                    </div>
+                </div>
+                <div class="specs p-4">
+                    <div class="about-box">
+                        <h4 class="about-product-header">About Product</h4>
+                        <p class="about-product-text">The Asus Zenbook Pro Dual Screen Laptop is a high-performance
+                            device with dual screens, providing productivity and versatility for creative professionals.
+                        </p>
+                    </div>
+                    <div class="technical-specs">
+                        <h4 class="technical-specs-header">Technical Specifications</h4>
+                        <ul class="specs-list unstyled-list ps-1 w-100">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="price-add-to-cart p-4">
+                    <div class="product-final-price">
+                        <h4 class="price-label">Price : </h4>
+                        <h4 class="overall-price"></h4>
+                    </div>
+                    <div class="quantity-select">
+                        <form action="#" class="product-quantity-form">
+                            <div class="input-group">
+                                <button type="button" class="minus-quantity px-2"><i
+                                        class="fa fa-xs fa-minus"></i></button>
+                                <input type="number" name="" min="1" max="10" id="productQuantityNumber"
+                                    class="py-1 quantity-number-input" value="1" readonly>
+                                <button type="button" class="plus-quantity px-2"><i
+                                        class="fa fa-xs fa-plus"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="add-to-btns-box mt-3">
+                        <button class="add-to-cart-btn btn btn-block">Add to cart <i class="fa fa-cart-shopping mx-1"
+                                aria-hidden="true"></i></button>
+                        <button class="add-to-wishlist-btn btn btn-block"><span class="add-to-wishlist-text">Add to wishlist</span><i
+                                class="fa fa-bookmark mx-1" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer container-fluid">
+        <section class="footer-brand row py-4">
+            <div class="footer-logo">
+                <img src="../assets/commerce-business-and-finance-svgrepo-com.svg" alt="brand-logo">
+            </div>
+            <div class="footer-brand-description">
+                <h4 class="footer-brand-description-header"> TECHNOLOGY SHOP</h4>
+                <h6 class="footer-brand-description-text"> Shop Smart, Live Better</h6>
+            </div>
+        </section>
+        <section class="footer-links row py-3">
+            <div class="quick-links p-4">
+                <h5 class="quick-links-header">Quick Links</h5>
+                <ul class="footer-list list-unstyled">
+                    <li class="footer-list-item"><a href="../index.html" class="footer-link">Home</a></li>
+                    <li class="footer-list-item"><a href="../index.html#categories" class="footer-link">Categories</a>
+                    </li>
+                    <li class="footer-list-item"><a href="#" class="footer-link">Products</a></li>
+                    <li class="footer-list-item"><a href="../index.html#specialOffers" class="footer-link">Special
+                            Offers</a></li>
+                    <li class="footer-list-item"><a href="../index.html#featuredProducts" class="footer-link">Featured
+                            Products</a>
+                    </li>
+                    <li class="footer-list-item"><a href="../index.html#FAQ" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contactus p-4">
+                <h5 class="contactus-header">Contact Us</h5>
+                <ul class="footer-list list-unstyled">
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i
+                                class="fa-brands fa-instagram pe-2"></i>Instagram</a></li>
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i
+                                class="fa-brands fa-linkedin pe-2"></i>LinkedIn</a></li>
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i
+                                class="fa-brands fa-telegram pe-2"></i>Telegram</a></li>
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i
+                                class="fa-brands fa-x-twitter pe-2"></i>X (Twitter)</a></li>
+                </ul>
+
+            </div>
+        </section>
+        <section class="copyright row justify-content-center align-items-center py-3">© 2026 Technology Shop. All rights
+            reserved.</section>
+    </footer>
+</body>
+
+<script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+<script src="../fontawesome-free-7.1.0-web/js/all.js"></script>
+<script src="../script.js" type="module"></script>
+
+</html>

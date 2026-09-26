@@ -14,6 +14,10 @@
 
 <body data-page="homepage">
 
+        <div class="message-box">
+
+        </div>
+
     <header class="header">
         <div class="container-fluid">
             <section class="top-header row justify-content-between align-items-center py-1 px-0 p-lg-2">
@@ -34,7 +38,7 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="logo-container col-10 col-sm-10 col-md-3">
-                    <a href="#"> <img src="./assests/commerce-business-and-finance-svgrepo-com.svg"
+                    <a href="#"> <img src="./assets/commerce-business-and-finance-svgrepo-com.svg"
                             class="logo-img img-thumbnail" alt="site logo"></a>
                     <div class="logo-text">
                         <h6>Technology Shop</h6>
@@ -75,14 +79,14 @@
                             data-bs-toggle="dropdown">Language</button>
                         <ul class="dropdown-menu mt-1 mt-md-2" aria-labelledby="headerLangDropDownBtn">
                             <li><a href="#" class="dropdown-item"><img
-                                        src="./assests/flag-for-flag-united-kingdom-svgrepo-com.svg"
+                                        src="./assets/flag-for-flag-united-kingdom-svgrepo-com.svg"
                                         class="flag-icon pe-2" alt=""><span>English</span></a></li>
                             <li><a href="#" class="dropdown-item"><img
-                                        src="./assests/flag-for-flag-iran-svgrepo-com.svg" class="flag-icon pe-2"
+                                        src="./assets/flag-for-flag-iran-svgrepo-com.svg" class="flag-icon pe-2"
                                         alt=""><span>Farsi</span></a></li>
                         </ul>
                         <a href="#" class="cart-btn text-center"><i class="fa fa-cart-shopping"></i><span
-                                class="ps-1">Cart</span></a>
+                                class="ps-1">Cart <span class="cart-count"></span></span></a>
                     </div>
                 </nav>
                 <button type="button" class="header-nav-btn d-inline-block d-md-none col-1 me-3">
@@ -102,7 +106,7 @@
                 <a href="pages/products.html" class="hero-section-shop-link p-3 ms-0 ms-lg-5">Shop Now</a>
             </div>
             <div class="hero-img-box py-5 py-lg-0 col-12 col-lg-6">
-                <img src="./assests/ChatGPT Image Aug 10, 2026, 04_41_15 PM.png" alt="hero image">
+                <img src="./assets/ChatGPT Image Aug 10, 2026, 04_41_15 PM.png" alt="hero image">
             </div>
         </section>
         <section class="features-container justify-content-center row py-3 mt-3">
@@ -145,7 +149,7 @@
                     <li class="category-item">
                         <a href="pages/products.html?category=smartphones">
                             <div class="category-image">
-                                <img src="assests/Clipped_image_20260811_193104.png" alt="smartphone-image">
+                                <img src="assets/Clipped_image_20260811_193104.png" alt="smartphone-image">
                             </div>
                             <div class="category-title text-center">Smartphone</div>
                         </a>
@@ -153,7 +157,7 @@
                     <li class="category-item">
                         <a href="pages/products.html?category=tablets">
                             <div class="category-image">
-                                <img src="assests/tablet.png" alt="tablet-image">
+                                <img src="assets/tablet.png" alt="tablet-image">
                             </div>
                             <div class="category-title text-center">Tablet</div>
                         </a>
@@ -161,7 +165,7 @@
                     <li class="category-item">
                         <a href="pages/products.html?category=laptops">
                             <div class="category-image">
-                                <img src="assests/laptop (2).png" alt="laptop-image">
+                                <img src="assets/laptop (2).png" alt="laptop-image">
                             </div>
                             <div class="category-title text-center">Laptop</div>
                         </a>
@@ -169,7 +173,7 @@
                     <li class="category-item">
                         <a href="pages/products.html?category=mobile-accessories">
                             <div class="category-image">
-                                <img src="assests/accessory.png" alt="accessory-image">
+                                <img src="assets/accessory.png" alt="accessory-image">
                             </div>
                             <div class="category-title text-center">Phone Accessories</div>
                         </a>
@@ -212,7 +216,7 @@
                                     </div>
                                     <h6 class=" product-price p-3"><span class="discounted-price pe-2"></span></h6>
                                     <div class="fp-buttons">
-                                        <a class="fp-view-btn p-2">View <i class="fa fa-eye"
+                                        <a class="fp-view-btn p-2" href="./pages/product.html">View <i class="fa fa-eye"
                                                 aria-hidden="true"></i></a><a class="fp-addtocard-btn p-2">Add to
                                             cart</a>
                                     </div>
@@ -268,7 +272,7 @@
                                     </div>
                                     <h6 class=" product-price p-3"><span class="discounted-price pe-2"></span><span
                                             class="without-discount-price">500</span></h6>
-                                    <a href="#" class="special-offer-link py-2 w-100 d-block text-center">Shop Now</a>
+                                    <a href="#" class="special-offer-link py-2 w-100 d-block text-center" href="">Shop Now</a>
                                 </div>
                             </article>
                         </li>
@@ -281,7 +285,7 @@
         <section class="FAQ row py-5" id="FAQ">
             <div class="accordion-container col-12 col-lg-9">
                 <ul class="accordion-list list-unstyled w-100 p-0 m-0">
-                    <li class="accordion-item-box m-0 w-100">
+                    <li class="accordion-item-box  w-100">
                         <div class="accordion-title-box px-2 py-3">
                             <h5 class="accordion-title d-flex align-items-center"><span class="question-icon pe-2"><i
                                         class="fa fa-question"></i></span><span class="question-text">What payment
@@ -293,7 +297,7 @@
                                 available payment methods shown at checkout.</p>
                         </div>
                     </li>
-                    <li class="accordion-item-box m-0 w-100">
+                    <li class="accordion-item-box  w-100">
                         <div class="accordion-title-box px-2 py-3">
                             <h5 class="accordion-title d-flex align-items-center"><span class="question-icon pe-2"><i
                                         class="fa fa-question"></i></span><span class="question-text">How long does
@@ -305,7 +309,7 @@
                                 choose. Estimated delivery time will be shown during checkout.</p>
                         </div>
                     </li>
-                    <li class="accordion-item-box m-0 w-100">
+                    <li class="accordion-item-box  w-100">
                         <div class="accordion-title-box px-2 py-3">
                             <h5 class="accordion-title d-flex align-items-center"><span class="question-icon pe-2"><i
                                         class="fa fa-question"></i></span><span class="question-text">Can I return or
@@ -317,7 +321,7 @@
                                 return period, provided they meet our return conditions.</p>
                         </div>
                     </li>
-                    <li class="accordion-item-box m-0 w-100">
+                    <li class="accordion-item-box  w-100">
                         <div class="accordion-title-box px-2 py-3">
                             <h5 class="accordion-title d-flex align-items-center"><span class="question-icon pe-2"><i
                                         class="fa fa-question"></i></span><span class="question-text">Are all products
@@ -329,7 +333,7 @@
                                 warranty. Warranty details are provided on each product page.</p>
                         </div>
                     </li>
-                    <li class="accordion-item-box m-0 w-100">
+                    <li class="accordion-item-box  w-100">
                         <div class="accordion-title-box px-2 py-3">
                             <h5 class="accordion-title d-flex align-items-center"><span class="question-icon pe-2"><i
                                         class="fa fa-question"></i></span><span class="question-text">How can I track my
@@ -348,37 +352,37 @@
         <section class="brands-slide-show row py-3">
             <div class="brands-list-container w-100">
                 <div class="brands-group">
-                    <div class="brand"><img src="assests/Acer-Logo-3.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Asus-Logo-SVG_002.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/2a1b31bb6446b2bc5113497ebc6d2484.png" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Sony-Logo-1.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/HP-Logo-3.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/apple-logo-5.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Huawei-Logo-SVG_001.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/samsung-logo-4.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/xiaomi-logo-5.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Acer-Logo-3.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Asus-Logo-SVG_002.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/2a1b31bb6446b2bc5113497ebc6d2484.png" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Sony-Logo-1.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/HP-Logo-3.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/apple-logo-5.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Huawei-Logo-SVG_001.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/samsung-logo-4.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/xiaomi-logo-5.svg" alt="brand-logo"></div>
                 </div>
                 <div class="brands-group">
-                    <div class="brand"><img src="assests/Acer-Logo-3.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Asus-Logo-SVG_002.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/2a1b31bb6446b2bc5113497ebc6d2484.png" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Sony-Logo-1.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/HP-Logo-3.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/apple-logo-5.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Huawei-Logo-SVG_001.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/samsung-logo-4.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/xiaomi-logo-5.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Acer-Logo-3.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Asus-Logo-SVG_002.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/2a1b31bb6446b2bc5113497ebc6d2484.png" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Sony-Logo-1.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/HP-Logo-3.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/apple-logo-5.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Huawei-Logo-SVG_001.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/samsung-logo-4.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/xiaomi-logo-5.svg" alt="brand-logo"></div>
                 </div>
                 <div class="brands-group">
-                    <div class="brand"><img src="assests/Acer-Logo-3.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Asus-Logo-SVG_002.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/2a1b31bb6446b2bc5113497ebc6d2484.png" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Sony-Logo-1.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/HP-Logo-3.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/apple-logo-5.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/Huawei-Logo-SVG_001.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/samsung-logo-4.svg" alt="brand-logo"></div>
-                    <div class="brand"><img src="assests/xiaomi-logo-5.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Acer-Logo-3.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Asus-Logo-SVG_002.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/2a1b31bb6446b2bc5113497ebc6d2484.png" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Sony-Logo-1.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/HP-Logo-3.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/apple-logo-5.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/Huawei-Logo-SVG_001.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/samsung-logo-4.svg" alt="brand-logo"></div>
+                    <div class="brand"><img src="assets/xiaomi-logo-5.svg" alt="brand-logo"></div>
                 </div>
             </div>
         </section>
@@ -387,7 +391,7 @@
     <footer class="footer container-fluid">
         <section class="footer-brand row py-4">
             <div class="footer-logo">
-                <img src="assests/commerce-business-and-finance-svgrepo-com.svg" alt="brand-logo">
+                <img src="assets/commerce-business-and-finance-svgrepo-com.svg" alt="brand-logo">
             </div>
             <div class="footer-brand-description">
                 <h4 class="footer-brand-description-header"> TECHNOLOGY SHOP</h4>
